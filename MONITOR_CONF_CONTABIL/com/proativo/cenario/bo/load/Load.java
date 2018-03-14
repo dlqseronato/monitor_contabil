@@ -113,8 +113,7 @@ public class Load extends Processo {
 		Log.info("Kenan - Inserindo lista de rejeitados.");
 		//tmdc.executar(listaRejeitados, new ThreadLoadRejeitados( cenario, tmdc,listaRejeitados.size()), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1);
 		tmdc.executar(listaRejeitados, new ThreadLoadRejeitados( cenario, tmdc,listaRejeitados.size()), cenario.getQuantidadeThreads(), Connections.CONN_PROATIVO);
-		
-		System.out.println("Vraw");
+	
 		Log.info("Quantidade de objetos carregados: "+listaVerdade.size());
 		Log.info("Quantidade de contas contábeis zeradas corrigidas: "+listaCorrigidos.size());
 		Log.info("Quantidade de erros detectados: "+listaRejeitados.size());
