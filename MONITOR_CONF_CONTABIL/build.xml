@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<project name="CENARIO" default="all" basedir=".">
+	<description>
+		Arquivo de compilacao e distribuicao de versoes do processo.
+	</description>
+	
+	<!-- Configuração do build -->
+	<property name="path.src" location="${basedir}" />
+	<property file="${path.src}/config/build.properties" />
+	
+	<!-- Configuração dos diretorios -->
+		<property name="path.raiz" location="build" />
+		<property name="path.build" location="build/${build.title}" />	
+		<property name="path.build.lib" location="${path.build}/lib" />
+		<property name="path.build.log" location="${path.build}/log" />
+		<property name="path.build.sql" location="${path.build}/sql" />
+		<property name="path.build.config" location="${path.build}/config" />
+		
+		<property name="path.config" location="${basedir}/config" />
+		<property name="path.bin" location="${basedir}/bin" />
+		<property name="path.lib" location="${basedir}/lib" />
+		<property name="path.sql" location="${basedir}/sql" />
+		<property name="path" location="${basedir}" />
+
+	<!-- Configuracao do CLASSPATH -->
+	<path id="compile.classpath">
+		<fileset dir="${path.lib}">
+			<include name="*.jar" /> 
+		</fileset>
+	</path>
+	<path id="dist.classpath">
+		<fileset dir="${path.build.lib}" >
+			<include name="*.jar" /> 
+		</fileset>
+	</path>
+		
+	<target name="all" depends="clean,folders,copy,doWindows, doUnix,dist,cleanLib,cleanEmail,zip,cleanFolder" description="Cria um novo arquivo de distribuição (sobrescreve)" />
+	
+	<target name="clean" description="Apaga o diretório de distribuição da versão.">
+		<delete dir="${path.bin}" />
+		<delete dir="${path.build}" />
+		<delete dir="${path.raiz}" />
+	</target>
+
+	<target name="folders" description="Cria a estrutura de diretórios.">
+		<!-- Cria a estrutura de diretorios -->
+		<mkdir dir="${path.bin}" />
+		<mkdir dir="${path.raiz}" />
+	</target>
+	
+	<target name="copy" description="Copia os arquivos para o build">
+		<copy todir="${path.build.lib}">
+			<fileset dir="${path.lib}"/>
+		</copy>
+		<copy todir="${path.build.sql}">
+			<fileset dir="${path.sql}" />
+		</copy>
+		<copy todir="${path.build.config}">
+			<fileset dir="${path.config}" />
+		</copy>
+	</target>
+	
+	<target name="dist" depends="folders" description="Cria os arquivos de distribuição">
+		
+		<tstamp>
+	        <format property="data" pattern="dd/MM/yyyy HH:mm" locale="pt,BR"/>
+	    </tstamp>
+		
+	    <pathconvert property="string.classpath" pathsep=' '>
+	       <path refid="dist.classpath" />
+	          <map from="${path.build.lib}" to="../../lib" />
+	    </pathconvert>
+		
+		<javac srcdir="${basedir}" destdir="${path.bin}" classpathref="compile.classpath" includeantruntime="false" encoding="cp1252" debug="yes"  />
+		
+		<jar jarfile="${path.build}/${build.title}.jar" basedir="${path.bin}" includes="**/*.class" compress="false">
+			<manifest>
+				<attribute name="Manifest-Version" value="1.0" />
+				<attribute name="Class-Path" value="${string.classpath}" />
+				<attribute name="Main-Class" value="com.proativo.cenario.app.CenarioApp" />
+	            <attribute name="Build-User" value="${user.name}"/>
+	            <attribute name="Build-Date" value="${data}"/>
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="cleanLib" description="Apaga o diretório de Lib">
+		<delete dir="${path.build.lib}" />
+	</target>
+	
+	<target name="zip">
+		<zip destfile="${path.build}.zip" basedir="${path.build}"/>
+	</target>
+	
+	<target name="cleanFolder" description="Apaga o diretório do build">
+		<delete dir="${path.build}" />
+	</target>
+	
+	<target name="cleanEmail" description="Apaga o arquivo de email">
+		<delete file="${path.build}/config/email.properties" />
+	</target>
+	
+  	<condition property="isWindows">
+		<os family="windows" />
+	</condition>
+	
+	<condition property="isUnix">
+		<os family="unix" />
+	</condition>
+	
+	<target name="doWindows" if="isWindows">
+		<copy tofile="${path.build}/${build.title}.bat" >
+			<fileset file="${path}/cenario_template.bat" />
+		</copy>
+		<replace file="${path.build}/${build.title}.bat" token="cenario_template" value="${build.title}" />
+	</target>
+
+	<target name="doUnix" if="isUnix">
+		<copy tofile="${path.build}/${build.title}.sh" >
+			<fileset file="${path}/cenario_template.sh" />
+		</copy>
+		<replace file="${path.build}/${build.title}.sh" token="cenario_template" value="${build.title}" />
+	</target>
+</project>

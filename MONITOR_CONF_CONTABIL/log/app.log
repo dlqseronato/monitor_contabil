@@ -1,0 +1,55 @@
+[2018-03-12 11:47:14,753] INFO : IT Suporte Ciclo da Receita
+[2018-03-12 11:47:14,775] INFO : MONITOR_CONF_CONTABIL Versao 1.0.0
+[2018-03-12 11:47:14,838] INFO : Iniciando Cenario MONITOR_CONF_CONTABIL - Execucao 81648
+[2018-03-12 11:47:14,978] INFO : Iniciando processo Load para todos os vencimentos
+[2018-03-12 11:47:14,997] INFO : Kenan - Buscando configurações atuais da Journals:
+[2018-03-12 11:47:29,936] ERROR : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130184 Id Value: 1
+[2018-03-12 11:47:30,032] ERROR : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130185 Id Value: 1
+[2018-03-12 11:47:30,060] ERROR : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130186 Id Value: 1
+[2018-03-12 11:47:30,091] ERROR : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130187 Id Value: 1
+[2018-03-12 11:47:30,123] ERROR : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130188 Id Value: 1
+[2018-03-12 11:47:30,154] ERROR : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130189 Id Value: 1
+[2018-03-12 11:47:30,186] ERROR : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130190 Id Value: 1
+[2018-03-12 11:47:30,216] ERROR : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130191 Id Value: 1
+[2018-03-12 11:47:55,205] INFO : Util - Buscar dados planilha MONITOR_CONTABIL_CONF.
+[2018-03-12 11:47:56,739] ERROR : Util - Arquivo de configuração MONITOR_CONTABIL_CONF não existe no caminho.
+[2018-03-12 11:47:56,780] INFO : Proativo - Buscando tabela verdade na tabela MONITOR_CONTABIL_CONF.
+[2018-03-12 11:47:59,374] INFO : Kenan - Executando batimento de informações:
+[2018-03-12 11:48:03,843] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento em 50 thread(s) para 6.103 item(ns)
+[2018-03-12 11:48:06,053] INFO : Processados 611 objetos de 6.103 - 10%
+[2018-03-12 11:48:07,677] INFO : Processados 1.221 objetos de 6.103 - 20%
+[2018-03-12 11:48:09,255] INFO : Processados 1.831 objetos de 6.103 - 30%
+[2018-03-12 11:48:11,033] INFO : Processados 2.442 objetos de 6.103 - 40%
+[2018-03-12 11:48:12,958] INFO : Processados 3.052 objetos de 6.103 - 50%
+[2018-03-12 11:48:14,659] INFO : Processados 3.662 objetos de 6.103 - 60%
+[2018-03-12 11:48:16,390] INFO : Processados 4.273 objetos de 6.103 - 70%
+[2018-03-12 11:48:18,007] INFO : Processados 4.883 objetos de 6.103 - 80%
+[2018-03-12 11:48:19,953] INFO : Processados 5.493 objetos de 6.103 - 90%
+[2018-03-12 11:48:21,667] INFO : Processados 6.103 objetos de 6.103 - 100%
+[2018-03-12 11:48:21,668] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento. Executadas 50 threads
+[2018-03-12 11:48:22,023] INFO : Kenan - Inserindo lista de rejeitados.
+[2018-03-12 11:48:25,641] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadLoadRejeitados em 50 thread(s) para 1.971 item(ns)
+[2018-03-12 11:48:25,846] INFO : Processados 198 objetos de 1.971 - 10%
+[2018-03-12 11:48:25,998] INFO : Processados 395 objetos de 1.971 - 20%
+[2018-03-12 11:48:26,137] INFO : Processados 592 objetos de 1.971 - 30%
+[2018-03-12 11:48:26,324] INFO : Processados 789 objetos de 1.971 - 40%
+[2018-03-12 11:48:26,448] INFO : Processados 986 objetos de 1.971 - 50%
+[2018-03-12 11:48:26,553] INFO : Processados 1.183 objetos de 1.971 - 60%
+[2018-03-12 11:48:26,664] INFO : Processados 1.380 objetos de 1.971 - 70%
+[2018-03-12 11:48:26,790] INFO : Processados 1.577 objetos de 1.971 - 80%
+[2018-03-12 11:48:26,905] INFO : Processados 1.774 objetos de 1.971 - 90%
+[2018-03-12 11:48:27,076] INFO : Processados 1.971 objetos de 1.971 - 100%
+[2018-03-12 11:48:27,076] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadLoadRejeitados. Executadas 50 threads
+[2018-03-12 11:48:27,379] INFO : Quantidade de objetos carregados: 6103
+[2018-03-12 11:48:27,379] INFO : Quantidade de contas contábeis zeradas corrigidas: 0
+[2018-03-12 11:48:27,380] INFO : Quantidade de erros detectados: 1971
+[2018-03-12 11:48:27,380] INFO : Enviando e-mail de report.
+[2018-03-12 11:48:27,627] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Action
+[2018-03-12 11:48:27,627] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Validation
+[2018-03-12 11:48:27,628] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Report
+[2018-03-12 11:48:27,644] INFO : Finalizando cenario MONITOR_CONF_CONTABIL - Execucao 81648 - Tempo de execucao: 00:01:15
+[2018-03-12 22:58:42,451] INFO : IT Suporte Ciclo da Receita
+[2018-03-12 22:58:42,452] INFO : MONITOR_CONF_CONTABIL Versao 1.0.0
+[2018-03-12 22:58:42,653] INFO : Iniciando Cenario MONITOR_CONF_CONTABIL - Execucao 81681
+[2018-03-12 22:58:43,285] INFO : Iniciando processo Load para todos os vencimentos
+[2018-03-12 22:58:43,320] INFO : Kenan - Buscando configurações atuais da Journals:
