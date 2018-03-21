@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.proativo.cenario.vo.ErroVo;
-import com.proativo.cenario.vo.ErroVo;
 import com.proativo.util.log.Log;
 import com.proativo.util.vo.CenarioVo;
 

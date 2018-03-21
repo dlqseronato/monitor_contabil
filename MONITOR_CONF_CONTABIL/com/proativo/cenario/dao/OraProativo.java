@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import com.proativo.cenario.vo.ErroVo;
-import com.proativo.cenario.vo.ProdutoVerdadeVo;
 import com.proativo.util.QueryWarehouse;
 import com.proativo.util.connection.Connections;
 import com.proativo.util.connection.DynamicConnection;

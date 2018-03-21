@@ -5,10 +5,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.mail.internet.AddressException;
+
 import com.proativo.cenario.dao.OraProativo;
 import com.proativo.cenario.vo.ErroVo;
-import com.proativo.cenario.vo.ProdutoVerdadeVo;
 import com.proativo.util.Mailer;
 import com.proativo.util.log.Log;
 import com.proativo.util.vo.CenarioVo;

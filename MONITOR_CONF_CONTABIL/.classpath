@@ -29,7 +29,6 @@
 	<classpathentry kind="lib" path="lib/proativo_util.jar" sourcepath="/PROATIVO_UTIL"/>
 	<classpathentry kind="lib" path="lib/xmlbeans-2.3.0.jar"/>
 	<classpathentry kind="lib" path="lib/excelReader.jar" sourcepath="/teste"/>
-	<classpathentry kind="lib" path="lib/ojdbc8.jar"/>
 	<classpathentry kind="lib" path="lib/ojdbc7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

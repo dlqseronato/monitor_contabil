@@ -2,8 +2,6 @@ package com.proativo.cenario.vo;
 
 import java.sql.Date;
 
-import com.proativo.util.vo.ObjetoUtilVo;
-
 public class ImpostoSapVo{
 	
 	private int jnlsCodeId;

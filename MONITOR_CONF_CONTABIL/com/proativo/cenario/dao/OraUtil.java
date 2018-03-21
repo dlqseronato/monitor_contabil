@@ -19,7 +19,6 @@ import jxl.Workbook;
 import jxl.read.biff.BiffException;
 import teste.Celula;
 import teste.LinhaCelulas;
-import teste.ObjetoVo;
 import teste.Planilha;
 
 public class OraUtil {

@@ -1,7 +1,6 @@
 package com.proativo.cenario.bo.load.threads;
 
 import com.proativo.cenario.dao.OraKenan;
-import com.proativo.cenario.dao.OraProativo;
 import com.proativo.cenario.vo.ProdutoVerdadeVo;
 import com.proativo.util.connection.Connections;
 import com.proativo.util.thread.ActionAbstract;
