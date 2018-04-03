@@ -61,13 +61,13 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 
 			if (	(sapOb.getJnlsIdValue() == newOb.getIdProdutoKenan() || sapOb.getJnlsIdValue2() == newOb.getIdProdutoKenan() || sapOb.getJnlsIdType() == 7) 
 					&& ((sapOb.getJnlsAccountCategory() == newOb.getAccountCategory()) || sapOb.getJnlsAccountCategory() == 0) 
-					&& (sapOb.getJnlsIdType() == 1 || sapOb.getJnlsIdType() == 3 || sapOb.getJnlsIdType() == 6 || sapOb.getJnlsIdType() == 7) 
+					&& (sapOb.getJnlsIdType() == 1 || sapOb.getJnlsIdType() == 3 || sapOb.getJnlsIdType() == 4 || sapOb.getJnlsIdType() == 6 || sapOb.getJnlsIdType() == 7) 
 					//&& (sapOb.getJnlsInactiveDate() == null || sapOb.getJnlsInactiveDate().after(cal.getTime())) 
 					&& (sapOb.getJnlsInactiveDate() == null )
 					) 
 			{
-				//RC ID TYPE = 3 E NRC ID TYPE = 6
-				if(sapOb.getJnlsIdType() == 3 || sapOb.getJnlsIdType() == 6) {
+				//RC ID TYPE = 3 , USO ID TYPE = 4 E NRC ID TYPE = 6
+				if(sapOb.getJnlsIdType() == 3 || sapOb.getJnlsIdType() == 4 || sapOb.getJnlsIdType() == 6 ) {
 					//PRODUTO FATURADO USE CODE = 1
 					if(sapOb.getJnlsUseCode() == 1 	&& ((sapOb.getJnlsOpenItemId() == newOb.getOpenItemIdFaturada()) || sapOb.getJnlsOpenItemId() == 0 || newOb.getOpenItemIdFaturada() == 0) ) {
 						newOb.setIdType(sapOb.getJnlsIdType());

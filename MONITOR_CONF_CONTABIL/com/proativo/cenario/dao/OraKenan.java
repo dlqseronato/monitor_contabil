@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.proativo.cenario.vo.ContDetVo;
+import com.proativo.cenario.vo.LoteVo;
 import com.proativo.cenario.vo.ProdutoSAPVo;
 import com.proativo.cenario.vo.ProdutoVerdadeVo;
 import com.proativo.util.QueryWarehouse;
@@ -18,205 +20,7 @@ import com.proativo.util.log.Log;
 
 public class OraKenan extends OraUtilKenan{
 
-	/*
-	
-	public ProdutoVerdadeVo kenanVerificaCContabilFaturada(ProdutoVerdadeVo ob,DynamicConnection dc) {
-		PreparedStatement pst = null;
-		ResultSet rs = null;
-		String sql = null;
-		ProdutoVerdadeVo newOb = ob;
-		try {
-			sql = QueryWarehouse.getQuery("kenanVerificaCContabilFaturada");
-			pst = dc.prepareStatement(sql);
-			pst.setInt(1, newOb.getIdProdutoKenan());
-			pst.setInt(2, newOb.getAccountCategory());
-			pst.setInt(3, newOb.getAccountCategory());
-			pst.setInt(4, newOb.getOpenItemIdFaturada());
-			pst.setInt(5, newOb.getOpenItemIdFaturada());
-			pst.setInt(6, newOb.getcContabilDebitoFaturada());
-			pst.setInt(7, newOb.getcContabilCreditoFaturada());
-			rs = pst.executeQuery();
-			if(rs.next()){
-				newOb.setJnlsCodeId(rs.getInt("JNL_CODE_ID"));
-				newOb.setUseCode(rs.getInt("USE_CODE"));
-				newOb.setIdType(rs.getInt("USE_TYPE"));
-				newOb.setMsgError(rs.getString("MENSAGEM"));
-				newOb.setJnlsCContabilDebitoFaturada(rs.getInt("JNL_CC_DEBITO"));
-				newOb.setJnlsCContabilCreditoFaturada(rs.getInt("JNL_CC_CREDITO"));
-				newOb.setErrorType(rs.getInt("ERROR_TYPE"));
-				return newOb;
-			}
-		} catch (SQLException e) {
-    		Log.error("Falha ao verificar conta contábil.", e);
-		} catch (Exception e) {
-			Log.error("Falha ao verificar conta contábil.", e);
-		} finally{
-			close(rs, pst);
-			dc.setUsed(false);
-		}
-		return null;
-	}
-	
-	public boolean kenanVerificaCContabilGenerico(ProdutoVerdadeVo ob,DynamicConnection dc) {
-		PreparedStatement pst = null;
-		ResultSet rs = null;
-		String sql = null;
-		ProdutoVerdadeVo newOb = ob;
-		try {
-			sql = QueryWarehouse.getQuery("kenanVerificaCContabil");
-			pst = dc.prepareStatement(sql);
-			pst.setInt(1, newOb.getIdProdutoKenan());
-			pst.setInt(2, newOb.getAccountCategory());
-			pst.setInt(3, newOb.getAccountCategory());
-			pst.setInt(4, newOb.getOpenItemIdFaturada());
-			pst.setInt(5, newOb.getOpenItemIdFaturada());
-			pst.setInt(6, newOb.getcContabilDebitoFaturada());
-			pst.setInt(7, newOb.getcContabilCreditoFaturada());
-			pst.setInt(8, newOb.getIdProdutoKenan());
-			pst.setInt(9, newOb.getAccountCategory());
-			pst.setInt(10, newOb.getAccountCategory());
-			pst.setInt(11, newOb.getOpenItemIdFaturada());
-			pst.setInt(12, newOb.getOpenItemIdFaturada());
-			pst.setInt(13, newOb.getcContabilDebitoAFaturar());
-			pst.setInt(14, newOb.getcContabilCreditoAFaturar());
-			rs = pst.executeQuery();
-			if(rs.next()){
-				 newOb.setJnlsCodeId(rs.getInt("JNL_CODE_ID"));
-				 
-				newOb.setUseCode(rs.getInt("USE_CODE"));
-				newOb.setUseType(rs.getString("USE_TYPE"));
-				newOb.setMsgError(rs.getString("MENSAGEM"));
-				newOb.setJnlsCContabilCreditoFaturada(rs.getInt("FML_ACCT_DB"));
-				newOb.setJnlsCContabilDebitoFaturada(rs.getInt("FML_ACCT_DB"));
-				newOb.setErrorType(rs.getInt("ERROR_TYPE"));
-				return false;
-			}
-		} catch (SQLException e) {
-    		Log.error("Falha ao verificar conta contábil.", e);
-		} catch (Exception e) {
-			Log.error("Falha ao verificar conta contábil.", e);
-		} finally{
-			close(rs, pst);
-			dc.setUsed(false);
-		}
-		return true;
-	}
-	
-
-	public boolean kenanVerificaCContabilFaturadaV1(ProdutoVerdadeVo ob,DynamicConnection dc) {
-		PreparedStatement pst = null;
-		ResultSet rs = null;
-		String sql = null;
-		ProdutoVerdadeVo newOb = ob;
-		try {
-			sql = QueryWarehouse.getQuery("kenanVerificaCContabilFaturadaV1");
-			pst = dc.prepareStatement(sql);
-			pst.setInt(1, newOb.getIdProdutoKenan());
-			pst.setInt(2, newOb.getAccountCategory());
-			pst.setInt(3, newOb.getAccountCategory());
-			pst.setInt(4, newOb.getOpenItemIdFaturada());
-			pst.setInt(5, newOb.getOpenItemIdFaturada());
-			pst.setInt(6, newOb.getcContabilDebitoFaturada());
-			pst.setInt(7, newOb.getcContabilCreditoFaturada());
-			
-			rs = pst.executeQuery();
-			if(rs.next()){
-				newOb.setJnlsCodeId(rs.getInt("JNL_CODE_ID"));
-				newOb.setUseCode(rs.getInt("USE_CODE"));
-				newOb.setUseType(rs.getString("USE_TYPE"));
-				newOb.setMsgError(rs.getString("MENSAGEM"));
-				newOb.setJnlsCContabilCreditoFaturada(rs.getInt("FML_ACCT_DB"));
-				newOb.setJnlsCContabilDebitoFaturada(rs.getInt("FML_ACCT_DB"));
-				newOb.setErrorType(rs.getInt("ERROR_TYPE"));
-				return true;
-			}
-		} catch (SQLException e) {
-    		Log.error("Falha ao verificar conta contábil.", e);
-		} catch (Exception e) {
-			Log.error("Falha ao verificar conta contábil.", e);
-		} finally{
-			close(rs, pst);
-			dc.setUsed(false);
-		}
-		return false;
-	}
-	
-
-	public boolean kenanVerificaCContabilAFaturarV1(ProdutoVerdadeVo ob,DynamicConnection dc) {
-		PreparedStatement pst = null;
-		ResultSet rs = null;
-		String sql = null;
-		ProdutoVerdadeVo newOb = ob;
-		try {
-			sql = QueryWarehouse.getQuery("kenanVerificaCContabilAFaturarV1");
-			pst = dc.prepareStatement(sql);
-			pst.setInt(1, newOb.getIdProdutoKenan());
-			pst.setInt(2, newOb.getAccountCategory());
-			pst.setInt(3, newOb.getAccountCategory());
-			pst.setInt(4, newOb.getOpenItemIdFaturada());
-			pst.setInt(5, newOb.getOpenItemIdFaturada());
-			pst.setInt(6, newOb.getcContabilDebitoAFaturar());
-			pst.setInt(7, newOb.getcContabilCreditoAFaturar());
-			
-			rs = pst.executeQuery();
-			if(rs.next()){
-				newOb.setJnlsCodeId(rs.getInt("JNL_CODE_ID"));
-				newOb.setUseCode(rs.getInt("USE_CODE"));
-				newOb.setUseType(rs.getString("USE_TYPE"));
-				newOb.setMsgError(rs.getString("MENSAGEM"));
-				newOb.setJnlsCContabilCreditoFaturada(rs.getInt("FML_ACCT_DB"));
-				newOb.setJnlsCContabilDebitoFaturada(rs.getInt("FML_ACCT_DB"));
-				newOb.setErrorType(rs.getInt("ERROR_TYPE"));
-				return true;
-			}
-		} catch (SQLException e) {
-    		Log.error("Falha ao verificar conta contábil.", e);
-		} catch (Exception e) {
-			Log.error("Falha ao verificar conta contábil.", e);
-		} finally{
-			close(rs, pst);
-			dc.setUsed(false);
-		}
-		return false;
-	}
-	public ProdutoVerdadeVo kenanVerificaCContabilAFaturar(ProdutoVerdadeVo ob,DynamicConnection dc) {
-		PreparedStatement pst = null;
-		ResultSet rs = null;
-		String sql = null;
-		ProdutoVerdadeVo newOb = ob;
-		try {
-			sql = QueryWarehouse.getQuery("kenanVerificaCContabilAFaturar");
-			pst = dc.prepareStatement(sql);
-			pst.setInt(1, newOb.getIdProdutoKenan());
-			pst.setInt(2, newOb.getAccountCategory());
-			pst.setInt(3, newOb.getAccountCategory());
-			pst.setInt(4, newOb.getOpenItemIdFaturada());
-			pst.setInt(5, newOb.getOpenItemIdFaturada());
-			pst.setInt(6, newOb.getcContabilDebitoAFaturar());
-			pst.setInt(7, newOb.getcContabilCreditoAFaturar());
-			rs = pst.executeQuery();
-			if(rs.next()){
-				newOb.setJnlsCodeId(rs.getInt("JNL_CODE_ID"));
-				newOb.setUseCode(rs.getInt("USE_CODE"));
-				newOb.setIdType(rs.getInt("USE_TYPE"));
-				newOb.setMsgError(rs.getString("MENSAGEM"));
-				newOb.setJnlsCContabilCreditoAFaturar(rs.getInt("JNL_CC_DEBITO"));
-				newOb.setJnlsCContabilDebitoAFaturar(rs.getInt("JNL_CC_CREDITO"));
-				newOb.setErrorType(rs.getInt("ERROR_TYPE"));
-				return newOb;
-			}
-		} catch (SQLException e) {
-    		Log.error("Falha ao verificar conta contábil.", e);
-		} catch (Exception e) {
-			Log.error("Falha ao verificar conta contábil.", e);
-		} finally{
-			close(rs, pst);
-			dc.setUsed(false);
-		}
-		return null;
-	}
-	*/
-	//Atualiza contas contabeis nulas na config
+		//Atualiza contas contabeis nulas na config
 	public ProdutoVerdadeVo kenanbuscaCContabil(ProdutoVerdadeVo ob,DynamicConnection dc) {
 		PreparedStatement pst = null;
 		ResultSet rs = null;
@@ -262,6 +66,85 @@ public class OraKenan extends OraUtilKenan{
 		}
 		return newOb;
 	}
+	
+	
+	
+	public LoteVo kenanBuscarLotesJnls() {
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		Connection dc = null;
+		String sql = null;
+		LoteVo newOb = null;
+		try {
+			sql = QueryWarehouse.getQuery("kenanBuscarLotesJnls");
+			dc = Connections.getConn(Connections.CONN_KENAN_CT+1);
+			pst = dc.prepareStatement(sql);			
+			rs = pst.executeQuery();
+			while(rs.next()){
+				newOb = new LoteVo(	rs.getString("LOTE"), 
+									rs.getString("PROCESSAMENTO"), 
+									rs.getString("COMPETENCIA"), 
+									rs.getInt("JNL_REF_NO"), 
+									rs.getInt("JNL_REF_NO_SERV"));
+			}
+		} catch (SQLException e) {
+    		Log.error("Falha ao buscar conta contábil.", e);
+		} catch (Exception e) {
+			Log.error("Falha ao buscar conta contábil.", e);
+		} finally{
+			close(rs, pst, dc);
+		}
+		return newOb;
+	}
+	
+
+	public List<ContDetVo> kenanBuscarContDet(String lote) {
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		Connection dc = null;
+		int cont = 0;
+		String sql = null;
+		ContDetVo ob  = null;
+		List<ContDetVo> ObList = new ArrayList<ContDetVo>();
+		
+		try {
+			sql = QueryWarehouse.getQuery("kenanBuscaContDet");
+			dc = Connections.getConn(Connections.CONN_KENAN_CT+1);
+			pst = dc.prepareStatement(sql);
+			pst.setString(1, lote);
+			rs = pst.executeQuery();
+			while(rs.next()){
+				cont++;	
+				ob = new ContDetVo(		cont,
+										rs.getInt("EMPRESA_MKT_CODE"),
+										rs.getDate("DATA_DOCUMENTO"), 
+										rs.getInt("TIPO_LANCAMENTO"), 
+										rs.getInt("ID_TYPE2"), 
+										rs.getInt("CONTA_CONTABIL_CR"), 
+										rs.getInt("CONTA_CONTABIL_DB"), 
+										rs.getInt("ACCOUNT_NO"), 
+										rs.getString("EXTERNAL_ID"), 
+										rs.getInt("ACCOUNT_CATEGORY"), 
+										rs.getInt("OPEN_ITEM_ID"),
+										rs.getString("COD_ATRIBUICAO"), 
+										rs.getString("DIVISAO"), 
+										rs.getString("CENTRO_CUSTO"), 
+										rs.getInt("ELEMENT"), 
+										rs.getString("ORDEM_INTERNA")
+										);
+				ObList.add(ob);
+			}
+		} catch (SQLException e) {
+    		Log.error("Falha ao buscar cont det.", e);
+		} catch (Exception e) {
+			Log.error("Falha ao buscar conta contábil.", e);
+		} finally{
+			close(rs, pst, dc);
+		}
+		return ObList;
+	}
+	
+	
 	//Atualiza contas contabeis nulas na config
 	public ProdutoVerdadeVo kenanbuscaCContabilAdj(ProdutoVerdadeVo ob,DynamicConnection dc) {
 		PreparedStatement pst = null;
@@ -485,7 +368,7 @@ public class OraKenan extends OraUtilKenan{
 		}
 		return null;
 	}
-	
+
 	public List<ProdutoSAPVo> kenanBuscaConfiguracoesJnls() {
 		ProdutoSAPVo ob ;
 		List<ProdutoSAPVo> lob = new ArrayList<ProdutoSAPVo>();
@@ -515,7 +398,7 @@ public class OraKenan extends OraUtilKenan{
 					ob.setJnlsCContabilDebito(rs.getInt("FML_ACCT_DB"));
 					ob.setJnlsCContabilCredito(rs.getInt("FML_ACCT_CR"));
 				}catch (Exception e) {
-					Log.error("Falha ao converter conta contábil em inteiro. Jnl Code Id: "+ob.getJnlsCodeId() +" Id Value: "+ob.getJnlsIdValue(),e.getCause());
+					Log.info("Falha ao converter conta contábil em inteiro. Jnl Code Id: "+ob.getJnlsCodeId() +" Id Value: "+ob.getJnlsIdValue()+ " Erro: " + e.getCause());
 				}
 				ob.setJnlsAdjCategory(rs.getInt("ADJ_CATEGORY"));
 				ob.setJnlsActiveDate(rs.getDate("ACTIVE_DATE"));

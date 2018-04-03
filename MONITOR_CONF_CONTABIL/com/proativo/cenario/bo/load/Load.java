@@ -11,7 +11,9 @@ import com.proativo.cenario.dao.OraKenan;
 import com.proativo.cenario.dao.OraProativo;
 import com.proativo.cenario.dao.OraUtil;
 import com.proativo.cenario.util.Email;
+import com.proativo.cenario.vo.ContDetVo;
 import com.proativo.cenario.vo.ErroVo;
+import com.proativo.cenario.vo.LoteVo;
 import com.proativo.cenario.vo.ProdutoSAPVo;
 import com.proativo.cenario.vo.ProdutoVerdadeVo;
 import com.proativo.util.Processo;
@@ -31,13 +33,16 @@ public class Load extends Processo {
 	//private static List<ProdutoVerdadeVo> listaRejeitados;
 	private static List<ErroVo> listaRejeitados;
 	private static List<ProdutoVerdadeVo> listaCorrigidos;
+	private LoteVo lote;;
+	private List<ContDetVo> contDetList;
 	public static int qtdErros;
 	public String processamentoCiclo;
 	public java.sql.Timestamp dataCiclo;
 	private OraUtil util;
 	private OraProativo proativo;
 	private OraKenan kenan;
-
+	
+	
 	public Load(){
 		this.tmdc = new ThreadManagerDynamicConnection();
 		util = new OraUtil();
@@ -70,6 +75,14 @@ public class Load extends Processo {
 		Log.info("Kenan - Buscando configurações atuais da Journals:");
 		listaSAP = kenan.kenanBuscaConfiguracoesJnls();
 		
+		Log.info("Kenan - Buscando ultimo lote processado da Journals:");
+		lote = kenan.kenanBuscarLotesJnls();
+		
+		Log.info("Kenan - Buscando lançamentos referente ao último lote "+lote.getLote()+" na GVT_KENAN_SAP_SPED_CONT_DET.");
+		contDetList = kenan.kenanBuscarContDet(lote.getLote());
+		
+		Log.info(String.valueOf(contDetList.size()));
+		
 		Log.info("Util - Buscar dados planilha MONITOR_CONTABIL_CONF.");
 		Planilha p;
 		boolean ArquivoExiste = false;
@@ -85,7 +98,7 @@ public class Load extends Processo {
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			Log.error("Util - Arquivo de configuração MONITOR_CONTABIL_CONF não existe no caminho.", e.getCause());
+			Log.info("Util - Arquivo de configuração MONITOR_CONTABIL_CONF não existe no caminho."+ " Erro: " + e.getCause());
 			ArquivoExiste = false;
 		}
 		if(ArquivoExiste) {
