@@ -1017,3 +1017,59 @@ java.sql.SQLException: Nome de coluna inválido
 [2018-04-12 16:38:05,955] INFO : Iniciando Cenario MONITOR_CONF_CONTABIL - Execucao 82946
 [2018-04-12 16:38:06,043] INFO : Iniciando processo Load para todos os vencimentos
 [2018-04-12 16:38:06,055] INFO : Kenan - Buscando configurações atuais da Journals.
+[2018-04-12 16:38:19,449] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130184 Id Value: 1 Erro: null
+[2018-04-12 16:38:19,449] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130185 Id Value: 1 Erro: null
+[2018-04-12 16:38:19,450] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130186 Id Value: 1 Erro: null
+[2018-04-12 16:38:19,450] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130187 Id Value: 1 Erro: null
+[2018-04-12 16:38:19,450] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130188 Id Value: 1 Erro: null
+[2018-04-12 16:38:19,451] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130189 Id Value: 1 Erro: null
+[2018-04-12 16:38:19,451] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130190 Id Value: 1 Erro: null
+[2018-04-12 16:38:19,451] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130191 Id Value: 1 Erro: null
+[2018-04-12 16:38:41,093] INFO : Kenan - Buscando ultimo lote processado da Journals.
+[2018-04-12 16:38:41,106] INFO : Kenan - Buscando divisões pré configuradas no Kenan.
+[2018-04-12 16:38:41,121] INFO : Kenan - Buscando ordens internas pré configuradas no Kenan.
+[2018-04-12 16:38:41,366] INFO : Kenan - Buscando centro de custos pré configuradas no Kenan.
+[2018-04-12 16:38:41,376] INFO : Kenan - Buscando quantidade de paginas da query da cont det.
+[2018-04-12 16:38:42,637] INFO : Kenan - Buscando lançamentos referente ao último lote P09JNL01.180412_031625_0000512903 na GVT_KENAN_SAP_SPED_CONT_DET.
+[2018-04-12 16:41:09,358] INFO : Kenan - Encontrada pagina 1 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 16:41:16,304] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 16:41:16,647] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 16:41:16,891] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 16:41:17,116] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 16:41:17,475] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 16:41:17,819] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 16:41:18,155] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 16:41:18,542] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 16:41:19,098] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 16:41:19,426] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 16:41:19,607] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 16:41:19,607] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 16:41:20,069] INFO : Nº total de rejeitados: 60
+[2018-04-12 16:43:48,270] INFO : Kenan - Encontrada pagina 2 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 16:43:52,781] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 16:43:53,169] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 16:43:53,278] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 16:43:53,374] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 16:43:53,461] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 16:43:53,538] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 16:43:53,613] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 16:43:53,704] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 16:43:53,791] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 16:43:53,872] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 16:43:53,975] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 16:43:53,980] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 16:43:54,436] INFO : Nº total de rejeitados: 60
+[2018-04-12 16:46:15,029] INFO : Kenan - Encontrada pagina 3 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 16:46:19,571] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 16:46:19,726] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 16:46:19,827] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 16:46:19,919] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 16:46:20,008] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 16:46:20,102] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 16:46:20,194] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 16:46:20,297] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 16:46:20,399] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 16:46:20,497] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 16:46:20,592] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 16:46:20,593] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 16:46:21,099] INFO : Nº total de rejeitados: 60
