@@ -1,4 +1,4 @@
-package com.proativo.cenario.app;
+ package com.proativo.cenario.app;
 
 import com.proativo.util.app.ProativoAppUtil;
 

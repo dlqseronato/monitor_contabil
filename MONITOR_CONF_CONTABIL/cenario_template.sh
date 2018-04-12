@@ -30,7 +30,7 @@ rot_exec_java()
 cd /app/gvt/scripts/proativo/cenarios/cenario_template
 rot_erro "$?"
 
-/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-35.b13.el6.x86_64/jre/bin/java -jar -Xms2048m -Xmx4096m cenario_template.jar
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-35.b13.el6.x86_64/jre/bin/java -jar -Xms4096m -Xmx4096m cenario_template.jar
 rot_erro "$?"
 }
 #

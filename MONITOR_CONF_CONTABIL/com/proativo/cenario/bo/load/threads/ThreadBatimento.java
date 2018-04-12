@@ -21,12 +21,9 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 	private OraKenan kenan;
 	private OraProativo proativo;
 	List<ProdutoSAPVo> listaSAP;
-	ErroVo erros;
-	List<ErroVo> list;
 
 	public ThreadBatimento(CenarioVo cenario, ThreadManagerDynamicConnection tmdc,Integer qtdeCasos,List<ProdutoSAPVo> listaSAP) {
 		super();
-		this.list = new ArrayList<ErroVo>();
 		this.tmdc = tmdc;
 		this.cenario = cenario;
 		this.kenan = new OraKenan();
@@ -41,7 +38,6 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 		List<Integer> lTaxType;
 		String vPrefix = null;
 		ErroVo errorOb;
-		erros = new ErroVo();
 		ImpostoVo iOb;
 		boolean rowFixed = false;
 		int validarImposto;
@@ -127,7 +123,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 					if(sapOb.getJnlsUseCode() == 1 ) {
 						newOb.setIdType(sapOb.getJnlsIdType());
 						newOb.setIdType2(sapOb.getJnlsIdType2());
-						//	BATIMENTO AJUSTE CONTA CONTÁBIL DÉBITO FATURADA
+						//ERRO 6: CONTA CONTÁBIL DÉBITO DIFERENTE DA JOURNALS
 						if (sapOb.getJnlsCContabilDebito() != newOb.getcContabilAdjDebitoFaturada()) {
 							if(newOb.getcContabilAdjDebitoFaturada() == 0 || newOb.getcContabilAdjDebitoFaturada() == -1) {
 								newOb.setcContabilAdjDebitoFaturada(sapOb.getJnlsCContabilDebito());
@@ -137,7 +133,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 								addToRejectList(errorOb,newOb, sapOb, 6);
 							}
 						}
-						// BATIMENTO AJUSTE CONTA CONTÁBIL CREDITO FATURADA
+						//ERRO 7: CONTA CONTÁBIL CRÉDITO DIFERENTE DA JOURNALS
 						if (sapOb.getJnlsCContabilCredito() != newOb.getcContabilAdjCreditoFaturada()) {						
 							if(newOb.getcContabilAdjCreditoFaturada() == 0 || newOb.getcContabilAdjCreditoFaturada() == -1) {
 								newOb.setcContabilAdjCreditoFaturada(sapOb.getJnlsCContabilCredito());
@@ -193,28 +189,28 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 
 		switch (codigoErro) {
 		case 2:
-			erro.setMsgError("ID: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil débito faturada "+ob.getcContabilDebitoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
+			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil débito faturada "+ob.getcContabilDebitoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
 			break;
 		case 3:
-			erro.setMsgError("ID: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil crédito faturada "+ob.getcContabilCreditoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
+			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil crédito faturada "+ob.getcContabilCreditoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
 			break;
 		case 4:
-			erro.setMsgError("ID: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil débito a faturar "+ob.getcContabilDebitoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
+			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil débito a faturar "+ob.getcContabilDebitoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
 			break;
 		case 5:
-			erro.setMsgError("ID: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil crédito a faturar "+ob.getcContabilCreditoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
+			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil crédito a faturar "+ob.getcContabilCreditoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
 			break;
 		case 6:
-			erro.setMsgError("ID: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste débito faturada "+ob.getcContabilAdjDebitoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
+			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste débito faturada "+ob.getcContabilAdjDebitoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
 			break;
 		case 7:
-			erro.setMsgError("ID: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste crédito faturada "+ob.getcContabilAdjCreditoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
+			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste crédito faturada "+ob.getcContabilAdjCreditoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
 			break;
 		case 8:
-			erro.setMsgError("ID: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste débito a faturar "+ob.getcContabilAdjDebitoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
+			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste débito a faturar "+ob.getcContabilAdjDebitoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
 			break;
 		case 9:
-			erro.setMsgError("ID: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste crédito a faturar "+ob.getcContabilAdjCreditoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
+			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste crédito a faturar "+ob.getcContabilAdjCreditoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
 			break;
 		default:
 			break;

@@ -5,15 +5,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.proativo.cenario.bo.load.threads.ThreadBatimento;
+import com.proativo.cenario.bo.load.threads.ThreadBatimento2;
 import com.proativo.cenario.bo.load.threads.ThreadLoadRejeitados;
 import com.proativo.cenario.bo.load.threads.ThreadLoadTabelaVerdade;
 import com.proativo.cenario.dao.OraKenan;
 import com.proativo.cenario.dao.OraProativo;
 import com.proativo.cenario.dao.OraUtil;
 import com.proativo.cenario.util.Email;
+import com.proativo.cenario.vo.CentroDeCustoVo;
 import com.proativo.cenario.vo.ContDetVo;
+import com.proativo.cenario.vo.DivisaoVo;
 import com.proativo.cenario.vo.ErroVo;
 import com.proativo.cenario.vo.LoteVo;
+import com.proativo.cenario.vo.OrdemInternaVo;
 import com.proativo.cenario.vo.ProdutoSAPVo;
 import com.proativo.cenario.vo.ProdutoVerdadeVo;
 import com.proativo.util.Processo;
@@ -30,10 +34,13 @@ public class Load extends Processo {
 	private ThreadManagerDynamicConnection tmdc;
 	private static List<ProdutoVerdadeVo> listaVerdade;
 	private static List<ProdutoSAPVo> listaSAP;
-	//private static List<ProdutoVerdadeVo> listaRejeitados;
 	private static List<ErroVo> listaRejeitados;
 	private static List<ProdutoVerdadeVo> listaCorrigidos;
-	private LoteVo lote;;
+	private static List<DivisaoVo> divisoes;
+	private static List<CentroDeCustoVo> centrosCusto;
+	private static List<OrdemInternaVo> ordensInternas;
+	private static int qtdPaginas;
+	private LoteVo lote;
 	private List<ContDetVo> contDetList;
 	public static int qtdErros;
 	public String processamentoCiclo;
@@ -69,19 +76,61 @@ public class Load extends Processo {
 	}
 	
 	
+	public static List<ErroVo> getListaRejeitados() {
+		return listaRejeitados;
+	}
+
+
+	public static void setListaRejeitados(List<ErroVo> listaRejeitados) {
+		Load.listaRejeitados = listaRejeitados;
+	}
+
+
+	public static List<DivisaoVo> getDivisoes(){
+		return divisoes;
+	}
+	
+	public static List<OrdemInternaVo> getOrdensInternas(){
+		return ordensInternas;
+	}
+	
+	public static List<CentroDeCustoVo> getCentrosDeCusto(){
+		return centrosCusto;
+	}
+	
 
 	public void executar(CenarioVo cenario, ProcessamentoCicloVo ciclo) {	
 		
-		Log.info("Kenan - Buscando configurações atuais da Journals:");
+		Log.info("Kenan - Buscando configurações atuais da Journals.");
 		listaSAP = kenan.kenanBuscaConfiguracoesJnls();
 		
-		Log.info("Kenan - Buscando ultimo lote processado da Journals:");
+		Log.info("Kenan - Buscando ultimo lote processado da Journals.");
 		lote = kenan.kenanBuscarLotesJnls();
 		
-		Log.info("Kenan - Buscando lançamentos referente ao último lote "+lote.getLote()+" na GVT_KENAN_SAP_SPED_CONT_DET.");
-		contDetList = kenan.kenanBuscarContDet(lote.getLote());
+		Log.info("Kenan - Buscando divisões pré configuradas no Kenan.");
+		divisoes = kenan.kenanBuscarDivisoes();
 		
-		Log.info(String.valueOf(contDetList.size()));
+		Log.info("Kenan - Buscando ordens internas pré configuradas no Kenan.");
+		ordensInternas = kenan.kenanBuscaOrdemInterna();
+		
+		Log.info("Kenan - Buscando centro de custos pré configuradas no Kenan.");
+		centrosCusto = kenan.kenanBuscaCentroDeCusto();
+		
+		Log.info("Kenan - Buscando quantidade de paginas da query da cont det.");
+		qtdPaginas = kenan.kenanBuscaContDetQtdPaginas(lote.getLote());
+		
+		Log.info("Kenan - Buscando lançamentos referente ao último lote "+lote.getLote()+" na GVT_KENAN_SAP_SPED_CONT_DET.");
+		for (int i = 1; i <= qtdPaginas; i++) {
+			contDetList = kenan.kenanBuscarContDet(lote.getLote(),i);
+			Log.info("Kenan - Encontrada pagina "+i+" de "+qtdPaginas+" com "+contDetList.size()+" registros do lote "+lote.getLote());
+			try {
+				tmdc.executar(contDetList, new ThreadBatimento2( cenario,tmdc,contDetList.size(),divisoes,ordensInternas), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1, Connections.CONN_KENAN_CT+2 ,Connections.CONN_PROATIVO);
+			} catch (NullPointerException e) {
+				Log.info("Erro NullPointerException");
+			}
+			
+			Log.info("Nº total de rejeitados: "+listaRejeitados.size());		
+		}
 		
 		Log.info("Util - Buscar dados planilha MONITOR_CONTABIL_CONF.");
 		Planilha p;
@@ -134,6 +183,7 @@ public class Load extends Processo {
 		Log.info("Enviando e-mail de report.");
 		Email.enviaEmail(cenario, listaVerdade.size(), listaVerdade.size() - listaRejeitados.size(), listaRejeitados.size(), listaRejeitados);
 		
+		proativo.proativoInsereControleExecucao(cenario.getIdExecucao(), listaRejeitados.size(), lote.getLote());
 		super.setChanged();
 		super.notifyObservers();
 	}

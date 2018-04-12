@@ -1,0 +1,7 @@
+Insert into GOV_IT_OWNER.MONIT_CONTABIL_CONTROL_EXEC 
+(ID_EXECUCAO,LOTE,TOTAL_ERROS) 
+values (
+?,
+?,
+?
+);

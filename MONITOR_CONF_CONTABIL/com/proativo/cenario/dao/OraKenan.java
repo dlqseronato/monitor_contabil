@@ -8,8 +8,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.proativo.cenario.vo.CentroDeCustoVo;
 import com.proativo.cenario.vo.ContDetVo;
+import com.proativo.cenario.vo.DivisaoVo;
 import com.proativo.cenario.vo.LoteVo;
+import com.proativo.cenario.vo.OrdemInternaVo;
 import com.proativo.cenario.vo.ProdutoSAPVo;
 import com.proativo.cenario.vo.ProdutoVerdadeVo;
 import com.proativo.util.QueryWarehouse;
@@ -20,7 +23,7 @@ import com.proativo.util.log.Log;
 
 public class OraKenan extends OraUtilKenan{
 
-		//Atualiza contas contabeis nulas na config
+	//Atualiza contas contabeis nulas na config
 	public ProdutoVerdadeVo kenanbuscaCContabil(ProdutoVerdadeVo ob,DynamicConnection dc) {
 		PreparedStatement pst = null;
 		ResultSet rs = null;
@@ -53,11 +56,11 @@ public class OraKenan extends OraUtilKenan{
 				if(newOb.getcContabilCreditoAFaturar() == 0 || newOb.getcContabilCreditoAFaturar() == -1) {
 					newOb.setcContabilCreditoAFaturar(rs.getInt("FML_ACCT_CR_AFATURAR"));
 				}
-				
+
 				//System.out.println("ID: "+ob.getId()+" DEPOIS : Alterando CC "+newOb.getIdProdutoKenan() +" " + newOb.getcContabilDebitoFaturada() + " "+ newOb.getcContabilCreditoFaturada()  + " " +newOb.getcContabilDebitoAFaturar()+" "+newOb.getcContabilCreditoAFaturar());
 			}
 		} catch (SQLException e) {
-    		Log.error("Falha ao buscar conta contábil.", e);
+			Log.error("Falha ao buscar conta contábil.", e);
 		} catch (Exception e) {
 			Log.error("Falha ao buscar conta contábil.", e);
 		} finally{
@@ -66,9 +69,9 @@ public class OraKenan extends OraUtilKenan{
 		}
 		return newOb;
 	}
-	
-	
-	
+
+
+
 	public LoteVo kenanBuscarLotesJnls() {
 		PreparedStatement pst = null;
 		ResultSet rs = null;
@@ -82,23 +85,136 @@ public class OraKenan extends OraUtilKenan{
 			rs = pst.executeQuery();
 			while(rs.next()){
 				newOb = new LoteVo(	rs.getString("LOTE"), 
-									rs.getString("PROCESSAMENTO"), 
-									rs.getString("COMPETENCIA"), 
-									rs.getInt("JNL_REF_NO"), 
-									rs.getInt("JNL_REF_NO_SERV"));
+						rs.getString("PROCESSAMENTO"), 
+						rs.getString("COMPETENCIA"), 
+						rs.getInt("JNL_REF_NO"), 
+						rs.getInt("JNL_REF_NO_SERV"));
 			}
 		} catch (SQLException e) {
-    		Log.error("Falha ao buscar conta contábil.", e);
+			Log.error("Falha ao buscar LOTE NA JOURNALS.", e);
 		} catch (Exception e) {
-			Log.error("Falha ao buscar conta contábil.", e);
+			Log.error("Falha ao buscar LOTE NA JOURNALS.", e);
 		} finally{
 			close(rs, pst, dc);
 		}
 		return newOb;
 	}
+
+
+
+
+	public List<DivisaoVo> kenanBuscarDivisoes() {
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		Connection dc = null;
+		String sql = null;
+		DivisaoVo newOb = null;
+		List<DivisaoVo> list = new ArrayList<DivisaoVo>();
+		try {
+			sql = QueryWarehouse.getQuery("kenanBuscaDivisoes");
+			dc = Connections.getConn(Connections.CONN_KENAN_CT+1);
+			pst = dc.prepareStatement(sql);			
+			rs = pst.executeQuery();
+			while(rs.next()){
+				newOb = new DivisaoVo(	
+						rs.getInt("MKT_CODE"),
+						rs.getString("DESCRICAO"), 
+						rs.getString("DIVISAO")
+						);
+				list.add(newOb);
+			}
+		} catch (SQLException e) {
+			Log.error("Falha ao buscar DIVISAO.", e);
+		} catch (Exception e) {
+			Log.error("Falha ao buscar DIVISAO.", e);
+		} finally{
+			close(rs, pst, dc);
+		}
+		return list;
+	}
+	
 	
 
-	public List<ContDetVo> kenanBuscarContDet(String lote) {
+	public int kenanBuscaContDetQtdPaginas(String lote) {
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		Connection dc = null;
+		String sql = null;
+		try {
+			sql = QueryWarehouse.getQuery("kenanBuscaContDetQtdPaginas");
+			dc = Connections.getConn(Connections.CONN_KENAN_CT+1);
+			pst = dc.prepareStatement(sql);
+			pst.setString(1, lote);
+			rs = pst.executeQuery();
+			if(rs.next()){
+				return rs.getInt("QTD_PAGINAS");
+			}
+		} catch (SQLException e) {
+			Log.error("Falha ao buscar DIVISAO.", e);
+		} catch (Exception e) {
+			Log.error("Falha ao buscar DIVISAO.", e);
+		} finally{
+			close(rs, pst, dc);
+		}
+		return 0;
+	}
+	public List<CentroDeCustoVo> kenanBuscaCentroDeCusto() {
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		Connection dc = null;
+		String sql = null;
+		List<CentroDeCustoVo> list = new ArrayList<CentroDeCustoVo>();
+		CentroDeCustoVo ob;
+		try {
+			sql = QueryWarehouse.getQuery("kenanBuscaCentroDeCusto");
+			dc = Connections.getConn(Connections.CONN_KENAN_CT+1);
+			pst = dc.prepareStatement(sql);
+			rs = pst.executeQuery();
+			while(rs.next()){
+				ob = new CentroDeCustoVo(rs.getString(1),
+										 rs.getInt(2));
+				list.add(ob);
+			}
+		} catch (SQLException e) {
+			Log.error("Falha ao buscar DIVISAO.", e);
+		} catch (Exception e) {
+			Log.error("Falha ao buscar DIVISAO.", e);
+		} finally{
+			close(rs, pst, dc);
+		}
+		return list;
+	}
+	
+	public List<OrdemInternaVo> kenanBuscaOrdemInterna() {
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		Connection dc = null;
+		String sql = null;
+		List<OrdemInternaVo> list = new ArrayList<OrdemInternaVo>();
+		OrdemInternaVo ob;
+		try {
+			sql = QueryWarehouse.getQuery("kenanBuscaOrdemInterna");
+			dc = Connections.getConn(Connections.CONN_KENAN_CT+1);
+			pst = dc.prepareStatement(sql);
+			rs = pst.executeQuery();
+			while(rs.next()){
+				ob = new OrdemInternaVo(rs.getInt("ELEMENT"),
+										 rs.getInt("JNL_ID_TYPE"),
+										 rs.getString("ORDEM_INTERNA"));
+				list.add(ob);
+			}
+		} catch (SQLException e) {
+			Log.error("Falha ao buscar ORDEM INTERNA.", e);
+		} catch (Exception e) {
+			Log.error("Falha ao buscar ORDEM INTERNA.", e);
+		} finally{
+			close(rs, pst, dc);
+		}
+		return list;
+	}
+
+
+	public List<ContDetVo> kenanBuscarContDet(String lote, int paginacao) {
 		PreparedStatement pst = null;
 		ResultSet rs = null;
 		Connection dc = null;
@@ -106,36 +222,39 @@ public class OraKenan extends OraUtilKenan{
 		String sql = null;
 		ContDetVo ob  = null;
 		List<ContDetVo> ObList = new ArrayList<ContDetVo>();
-		
+
 		try {
 			sql = QueryWarehouse.getQuery("kenanBuscaContDet");
 			dc = Connections.getConn(Connections.CONN_KENAN_CT+1);
 			pst = dc.prepareStatement(sql);
 			pst.setString(1, lote);
+			pst.setInt(2, paginacao);
+			pst.setInt(3, paginacao);
 			rs = pst.executeQuery();
 			while(rs.next()){
 				cont++;	
 				ob = new ContDetVo(		cont,
-										rs.getInt("EMPRESA_MKT_CODE"),
-										rs.getDate("DATA_DOCUMENTO"), 
-										rs.getInt("TIPO_LANCAMENTO"), 
-										rs.getInt("ID_TYPE2"), 
-										rs.getInt("CONTA_CONTABIL_CR"), 
-										rs.getInt("CONTA_CONTABIL_DB"), 
-										rs.getInt("ACCOUNT_NO"), 
-										rs.getString("EXTERNAL_ID"), 
-										rs.getInt("ACCOUNT_CATEGORY"), 
-										rs.getInt("OPEN_ITEM_ID"),
-										rs.getString("COD_ATRIBUICAO"), 
-										rs.getString("DIVISAO"), 
-										rs.getString("CENTRO_CUSTO"), 
-										rs.getInt("ELEMENT"), 
-										rs.getString("ORDEM_INTERNA")
-										);
+						rs.getInt("EMPRESA_MKT_CODE"),
+						rs.getDate("DATA_DOCUMENTO"), 
+						rs.getInt("TIPO_LANCAMENTO"), 
+						rs.getInt("ID_TYPE2"), 
+						rs.getInt("CONTA_CONTABIL_CR"), 
+						rs.getInt("CONTA_CONTABIL_DB"), 
+						rs.getInt("ACCOUNT_NO"), 
+						rs.getString("EXTERNAL_ID"), 
+						rs.getInt("ACCOUNT_CATEGORY"), 
+						rs.getInt("OPEN_ITEM_ID"),
+						rs.getString("COD_ATRIBUICAO"), 
+						rs.getString("DIVISAO"), 
+						rs.getString("CENTRO_CUSTO"), 
+						rs.getInt("ELEMENT"), 
+						rs.getString("ORDEM_INTERNA"),
+						rs.getString("TECNOLOGIA_OFICIAL")
+						);
 				ObList.add(ob);
 			}
 		} catch (SQLException e) {
-    		Log.error("Falha ao buscar cont det.", e);
+			Log.error("Falha ao buscar cont det.", e);
 		} catch (Exception e) {
 			Log.error("Falha ao buscar conta contábil.", e);
 		} finally{
@@ -143,8 +262,8 @@ public class OraKenan extends OraUtilKenan{
 		}
 		return ObList;
 	}
-	
-	
+
+
 	//Atualiza contas contabeis nulas na config
 	public ProdutoVerdadeVo kenanbuscaCContabilAdj(ProdutoVerdadeVo ob,DynamicConnection dc) {
 		PreparedStatement pst = null;
@@ -152,7 +271,7 @@ public class OraKenan extends OraUtilKenan{
 		String sql = null;
 		ProdutoVerdadeVo newOb = ob;
 		try {
-			
+
 			sql = QueryWarehouse.getQuery("kenanBuscaCContabilAdj");
 			pst = dc.prepareStatement(sql);
 			pst.setInt(1, newOb.getIdProdutoKenan());
@@ -165,7 +284,7 @@ public class OraKenan extends OraUtilKenan{
 			//System.out.println("ID: "+ob.getId()+" ANTES AJUSTE : Alterando CC "+newOb.getIdProdutoKenan() +" " + newOb.getcContabilAdjDebitoFaturada() + " "+ newOb.getcContabilAdjCreditoFaturada()  + " " +newOb.getcContabilAdjDebitoAFaturar()+" "+newOb.getcContabilAdjCreditoAFaturar());
 			if(rs.next()){
 				newOb.setJnlsCodeId(rs.getInt("JNL_CODE_ID"));
-				
+
 				if(newOb.getcContabilAdjDebitoFaturada() == 0 || newOb.getcContabilAdjDebitoFaturada() == -1) {
 					newOb.setcContabilAdjDebitoFaturada(rs.getInt("FML_ACCT_DB_FATURADA"));
 				}
@@ -182,7 +301,7 @@ public class OraKenan extends OraUtilKenan{
 				//System.out.println("ID: "+ob.getId()+" DEPOIS AJUSTE : Alterando CC "+newOb.getIdProdutoKenan() +" " + newOb.getcContabilAdjDebitoFaturada() + " "+ newOb.getcContabilAdjCreditoFaturada()  + " " +newOb.getcContabilAdjDebitoAFaturar()+" "+newOb.getcContabilAdjCreditoAFaturar());
 			}
 		} catch (SQLException e) {
-    		Log.error("Falha ao buscar conta contábil.", e);
+			Log.error("Falha ao buscar conta contábil.", e);
 		} catch (Exception e) {
 			Log.error("Falha ao buscar conta contábil.", e);
 		} finally{
@@ -191,7 +310,7 @@ public class OraKenan extends OraUtilKenan{
 		}
 		return newOb;
 	}
-	
+
 
 	public void kenanInsereTabelaVerdade(ProdutoVerdadeVo ob, DynamicConnection dc) {
 		PreparedStatement pst = null;
@@ -224,21 +343,21 @@ public class OraKenan extends OraUtilKenan{
 			pst.setString(23, ob.getOrdemInternaAFaturar());
 			pst.setString(24, ob.getCentroCustoAFaturar());
 			pst.setInt(25, ob.getOpenItemIdAFaturar());
-			
+
 			pst.setInt(26, ob.getcContabilAdjDebitoFaturada());
 			pst.setInt(27, ob.getcContabilAdjCreditoFaturada());
 			pst.setString(28, ob.getDivisaoAdjFaturada());
 			pst.setString(29, ob.getOrdemInternaAdjFaturada());
 			pst.setString(30, ob.getCentroCustoAdjFaturada());
 			pst.setInt(31, ob.getOpenItemIdAdjFaturada());
-			
+
 			pst.setInt(32, ob.getcContabilAdjDebitoAFaturar());
 			pst.setInt(33, ob.getcContabilAdjCreditoAFaturar());
 			pst.setString(34, ob.getDivisaoAdjAFaturar());
 			pst.setString(35, ob.getOrdemInternaAdjAFaturar());
 			pst.setString(36, ob.getCentroCustoAdjAFaturar());
 			pst.setInt(37, ob.getOpenItemIdAdjAFaturar());
-			
+
 			pst.executeUpdate();
 		} catch (SQLException e) {
 			Log.error("Falha ao Inserir Tabela Verdade. ", e);
@@ -249,7 +368,7 @@ public class OraKenan extends OraUtilKenan{
 			dc.setUsed(false);
 		}		
 	}
-	
+
 	public void kenanInsereTabelaSAP(ProdutoVerdadeVo ob, DynamicConnection dc) {
 		PreparedStatement pst = null;
 		String sql = null;	
@@ -258,8 +377,8 @@ public class OraKenan extends OraUtilKenan{
 			pst = dc.prepareStatement(sql);
 			pst.setInt(1, ob.getIdProdutoKenan());
 			pst.setString(2, ob.getDescricaoProduto());
-		
-			
+
+
 			pst.executeUpdate();
 		} catch (SQLException e) {
 			Log.error("Falha ao Inserir Tabela Verdade. ", e);
@@ -270,8 +389,8 @@ public class OraKenan extends OraUtilKenan{
 			dc.setUsed(false);
 		}		
 	}
-	
-	
+
+
 	public void kenanAtualizaTabelaVerdade(ProdutoVerdadeVo ob, DynamicConnection dc) {
 		PreparedStatement pst = null;
 		String sql = null;	
@@ -296,10 +415,10 @@ public class OraKenan extends OraUtilKenan{
 			close(pst);
 			dc.setUsed(false);
 		}
-		
-		
+
+
 	}
-	
+
 
 	public List<ProdutoVerdadeVo> kenanBuscarTabelaVerdade() {
 		ProdutoVerdadeVo ob ;
@@ -347,18 +466,18 @@ public class OraKenan extends OraUtilKenan{
 				ob.setOrdemInternaAdjFaturada(rs.getString("FAT_ADJ_ORDEM_INTERNA"));
 				ob.setCentroCustoAdjFaturada(rs.getString("FAT_ADJ_CENTRO_CUSTO"));
 				ob.setOpenItemIdAdjFaturada(rs.getInt("FAT_ADJ_OPEN_ITEM_ID"));
-				
+
 				ob.setcContabilAdjDebitoAFaturar(rs.getInt("A_FAT_ADJ_CC_DEBITO"));
 				ob.setcContabilAdjCreditoAFaturar(rs.getInt("A_FAT_ADJ_CC_CREDITO"));
 				ob.setDivisaoAdjAFaturar(rs.getString("A_FAT_ADJ_DIVISAO"));
 				ob.setOrdemInternaAdjAFaturar(rs.getString("A_FAT_ADJ_ORDEM_INTERNA"));
 				ob.setCentroCustoAdjAFaturar(rs.getString("A_FAT_ADJ_CENTRO_CUSTO"));
 				ob.setOpenItemIdAdjAFaturar(rs.getInt("A_FAT_ADJ_OPEN_ITEM_ID"));	
-				
+
 				lob.add(ob);
 			}
 			return lob;
-			
+
 		} catch (SQLException e) {
 			Log.error("Falha ao buscar Tabela Verdade. ", e);
 		} catch (Exception e) {
@@ -406,7 +525,7 @@ public class OraKenan extends OraUtilKenan{
 				lob.add(ob);
 			}
 			return lob;
-			
+
 		} catch (SQLException e) {
 			Log.error("Falha ao buscar Tabela Verdade. ", e);
 		} catch (Exception e) {
@@ -416,7 +535,7 @@ public class OraKenan extends OraUtilKenan{
 		}
 		return null;
 	}
-	
+
 	public List<Integer> kenanBuscaTaxTypeCode(ProdutoVerdadeVo ob) {
 		//ProdutoSAPVo ob ;
 		List<Integer> lob = new ArrayList<Integer>();
@@ -435,7 +554,7 @@ public class OraKenan extends OraUtilKenan{
 				lob.add(rs.getInt("TAX_TYPE_CODE"));
 			}
 			return lob;
-			
+
 		} catch (SQLException e) {
 			Log.error("Falha ao buscar Tabela Verdade. ", e);
 		} catch (Exception e) {
@@ -445,7 +564,7 @@ public class OraKenan extends OraUtilKenan{
 		}
 		return null;
 	}
-	
+
 	public boolean kenanBuscaQtClassificacaoTv(ProdutoVerdadeVo ob) {
 		//ProdutoSAPVo ob ;
 		Connection dc = null;
@@ -473,7 +592,7 @@ public class OraKenan extends OraUtilKenan{
 		}
 		return false;
 	}
-	
+
 	public List<Integer> kenanBuscaCassificacaoTV(ProdutoVerdadeVo ob) {
 		//ProdutoSAPVo ob ;
 		List<Integer> lob = new ArrayList<Integer>();
@@ -492,7 +611,7 @@ public class OraKenan extends OraUtilKenan{
 				lob.add(rs.getInt("TAX_TYPE_CODE"));
 			}
 			return lob;
-			
+
 		} catch (SQLException e) {
 			Log.error("Falha ao buscar Tabela Verdade. ", e);
 		} catch (Exception e) {
@@ -502,8 +621,8 @@ public class OraKenan extends OraUtilKenan{
 		}
 		return null;
 	}
-	
-	
+
+
 	public void kenanLimparTabelaVerdade() {
 		Connection dc = null;
 		PreparedStatement pst = null;
@@ -520,5 +639,5 @@ public class OraKenan extends OraUtilKenan{
 		} finally{
 			close(pst,dc);
 		}
-		}
+	}
 }

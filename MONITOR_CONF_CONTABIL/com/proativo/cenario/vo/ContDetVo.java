@@ -19,6 +19,8 @@ public class ContDetVo {
 	private String centroCusto;
 	private int element;
 	private String ordemInterna;
+	private String tecnologia;
+	;
 	
 	
 	
@@ -26,7 +28,7 @@ public class ContDetVo {
 	public ContDetVo(int id, int empresaMktCode, Date dataDocumento, int tipoLancamento, int idType2,
 			int contaContabilDb, int contaConbabilCr, int accountNo, String externalId, int accountCategory,
 			int openItemId, String codAtribuicao, String divisao, String centroCusto, int element,
-			String ordemInterna) {
+			String ordemInterna,String tecnologia) {
 		super();
 		this.id = id;
 		this.empresaMktCode = empresaMktCode;
@@ -44,6 +46,10 @@ public class ContDetVo {
 		this.centroCusto = centroCusto;
 		this.element = element;
 		this.ordemInterna = ordemInterna;
+		if(tecnologia != null)
+			this.tecnologia = tecnologia;
+		else
+			this.tecnologia = "Indefinido";
 	}
 	public int getId() {
 		return id;
@@ -140,6 +146,12 @@ public class ContDetVo {
 	}
 	public void setOrdemInterna(String ordemInterna) {
 		this.ordemInterna = ordemInterna;
+	}
+	public String getTecnologia() {
+		return tecnologia;
+	}
+	public void setTecnologia(String tecnologia) {
+		this.tecnologia = tecnologia;
 	}
 	
 	

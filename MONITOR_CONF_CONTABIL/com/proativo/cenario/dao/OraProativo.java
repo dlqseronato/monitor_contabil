@@ -1,7 +1,9 @@
 package com.proativo.cenario.dao;
 
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.proativo.cenario.vo.ErroVo;
@@ -48,6 +50,29 @@ public class OraProativo extends OraUtilProativo {
 		} finally{
 			close(pst);
 			dc.setUsed(false);
+		}		
+	}
+	
+	public void proativoInsereControleExecucao(int idExecucao, int qtdRejeitados,  String lote) {
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		Connection dc = null;
+		String sql = null;	
+		
+		try {
+			sql = QueryWarehouse.getQuery("proativoInsereControleExecucao");
+			dc = Connections.getConn(Connections.CONN_PROATIVO);
+			pst = dc.prepareStatement(sql);
+			pst.setInt(1,idExecucao);
+			pst.setString(2, lote);
+			pst.setInt(3, qtdRejeitados);
+			pst.executeUpdate();
+		} catch (SQLException e) {
+			Log.error("Falha ao Inserir Controle Execucao. ", e);
+		} catch (Exception e) {
+			Log.error("Falha ao Inserir Controle Execucao. ", e);
+		} finally{
+			close(pst,dc,rs);
 		}		
 	}
 

@@ -1,0 +1,4 @@
+SELECT  ceil(count(1)/1000000) QTD_PAGINAS
+FROM arborgvt_journals.GVT_KENAN_SAP_SPED_CONT_DET 
+WHERE LOTE = ?
+;
