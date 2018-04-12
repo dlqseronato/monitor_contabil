@@ -31,8 +31,8 @@ public class OraUtil {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		//File f = new File("/app/gvt/scripts/proativo/cenarios/MONITOR_CONF_CONTABIL/input/GARANTIA_CONTABIL_CONF.xls");
-		File f = new File("D:/GARANTIA_CONTABIL_CONF.xls");
+		File f = new File("/app/gvt/scripts/proativo/cenarios/MONITOR_CONF_CONTABIL/input/GARANTIA_CONTABIL_CONF.xls");
+		//File f = new File("D:/GARANTIA_CONTABIL_CONF.xls");
 		JButton open = new JButton();
 		fc = new JFileChooser();
 		fc.setCurrentDirectory(new java.io.File("/app/gvt/scripts/proativo/cenarios/MONITOR_CONF_CONTABIL/input/"));

@@ -1073,3 +1073,29 @@ java.sql.SQLException: Nome de coluna inválido
 [2018-04-12 16:46:20,592] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
 [2018-04-12 16:46:20,593] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
 [2018-04-12 16:46:21,099] INFO : Nº total de rejeitados: 60
+[2018-04-12 16:48:37,853] INFO : IT Suporte Ciclo da Receita
+[2018-04-12 16:48:37,857] INFO : monitor_conf_contabil Versao 2.0.0
+[2018-04-12 16:48:37,903] INFO : Iniciando Cenario MONITOR_CONF_CONTABIL - Execucao 82948
+[2018-04-12 16:48:38,002] INFO : Iniciando processo Load para todos os vencimentos
+[2018-04-12 16:48:38,016] INFO : Kenan - Buscando configurações atuais da Journals.
+[2018-04-12 16:48:38,259] INFO : IT Suporte Ciclo da Receita
+[2018-04-12 16:48:38,260] INFO : monitor_conf_contabil Versao 2.0.0
+[2018-04-12 16:48:38,303] INFO : Iniciando Cenario MONITOR_CONF_CONTABIL - Execucao 82949
+[2018-04-12 16:48:38,409] INFO : Iniciando processo Load para todos os vencimentos
+[2018-04-12 16:48:38,428] INFO : Kenan - Buscando configurações atuais da Journals.
+[2018-04-12 16:48:51,072] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130184 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,072] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130185 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,072] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130186 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,073] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130187 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,073] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130188 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,073] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130189 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,073] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130190 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,073] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130191 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,283] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130184 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,285] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130185 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,286] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130186 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,286] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130187 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,286] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130188 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,287] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130189 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,287] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130190 Id Value: 1 Erro: null
+[2018-04-12 16:48:51,288] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130191 Id Value: 1 Erro: null
