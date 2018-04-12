@@ -1099,3 +1099,344 @@ java.sql.SQLException: Nome de coluna inválido
 [2018-04-12 16:48:51,287] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130189 Id Value: 1 Erro: null
 [2018-04-12 16:48:51,287] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130190 Id Value: 1 Erro: null
 [2018-04-12 16:48:51,288] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130191 Id Value: 1 Erro: null
+[2018-04-12 16:49:12,486] INFO : Kenan - Buscando ultimo lote processado da Journals.
+[2018-04-12 16:49:12,500] INFO : Kenan - Buscando divisões pré configuradas no Kenan.
+[2018-04-12 16:49:12,513] INFO : Kenan - Buscando ordens internas pré configuradas no Kenan.
+[2018-04-12 16:49:12,787] INFO : Kenan - Buscando centro de custos pré configuradas no Kenan.
+[2018-04-12 16:49:12,797] INFO : Kenan - Buscando quantidade de paginas da query da cont det.
+[2018-04-12 16:49:12,904] INFO : Kenan - Buscando ultimo lote processado da Journals.
+[2018-04-12 16:49:12,917] INFO : Kenan - Buscando divisões pré configuradas no Kenan.
+[2018-04-12 16:49:12,928] INFO : Kenan - Buscando ordens internas pré configuradas no Kenan.
+[2018-04-12 16:49:13,213] INFO : Kenan - Buscando centro de custos pré configuradas no Kenan.
+[2018-04-12 16:49:13,225] INFO : Kenan - Buscando quantidade de paginas da query da cont det.
+[2018-04-12 16:49:13,978] INFO : Kenan - Buscando lançamentos referente ao último lote P09JNL01.180412_031625_0000512903 na GVT_KENAN_SAP_SPED_CONT_DET.
+[2018-04-12 16:49:14,388] INFO : Kenan - Buscando lançamentos referente ao último lote P09JNL01.180412_031625_0000512903 na GVT_KENAN_SAP_SPED_CONT_DET.
+[2018-04-12 16:51:34,613] INFO : Kenan - Encontrada pagina 1 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 16:51:39,032] INFO : Kenan - Encontrada pagina 1 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 16:51:39,095] ERROR : Erro ao testar a conexao: PROATIVO_KENAN_CT1-1
+java.sql.SQLException: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1018)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:501)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:522)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:257)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:437)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:954)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:639)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:666)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:566)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:65)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:840)
+	at org.apache.commons.dbcp.PoolingDataSource.getConnection(PoolingDataSource.java:96)
+	at com.proativo.util.connection.DBPoolManager.testConnection(DBPoolManager.java:108)
+	at com.proativo.util.connection.DBPoolManager.getConnection(DBPoolManager.java:83)
+	at com.proativo.util.connection.Connections.getConn(Connections.java:75)
+	at com.proativo.util.connection.DynamicConnection.<init>(DynamicConnection.java:35)
+	at com.proativo.util.thread.ThreadManagerDynamicConnection.getDynamicConnections(ThreadManagerDynamicConnection.java:142)
+	at com.proativo.util.thread.ThreadManagerDynamicConnection.executar(ThreadManagerDynamicConnection.java:71)
+	at com.proativo.cenario.bo.load.Load.executar(Load.java:127)
+	at com.proativo.util.app.ProativoAppUtil.executaAplicacao(ProativoAppUtil.java:100)
+	at com.proativo.cenario.app.CenarioApp.main(CenarioApp.java:13)
+[2018-04-12 16:51:39,233] INFO : [PROATIVO_KENAN_CT1-1] URL1 falhou!
+[2018-04-12 16:51:39,234] INFO : ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+[2018-04-12 16:51:39,234] INFO : [PROATIVO_KENAN_CT1-2] Tentando URL2 ...
+[2018-04-12 16:51:39,234] ERROR : Ocorreu um erro ao obter uma conexao do Pool de Conexoes para a conexao PROATIVO_KENAN_CT1. Aguardando 5 minutos para realizar uma nova tentativa. Tentativa 1 de 5.
+java.sql.SQLException: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1018)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:501)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:522)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:257)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:437)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:954)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:639)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:666)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:566)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:65)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:840)
+	at org.apache.commons.dbcp.PoolingDataSource.getConnection(PoolingDataSource.java:96)
+	at com.proativo.util.connection.DBPoolManager.getConnection(DBPoolManager.java:84)
+	at com.proativo.util.connection.Connections.getConn(Connections.java:75)
+	at com.proativo.util.connection.DynamicConnection.<init>(DynamicConnection.java:35)
+	at com.proativo.util.thread.ThreadManagerDynamicConnection.getDynamicConnections(ThreadManagerDynamicConnection.java:142)
+	at com.proativo.util.thread.ThreadManagerDynamicConnection.executar(ThreadManagerDynamicConnection.java:71)
+	at com.proativo.cenario.bo.load.Load.executar(Load.java:127)
+	at com.proativo.util.app.ProativoAppUtil.executaAplicacao(ProativoAppUtil.java:100)
+	at com.proativo.cenario.app.CenarioApp.main(CenarioApp.java:13)
+[2018-04-12 16:51:41,553] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 16:51:41,907] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 16:51:42,167] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 16:51:42,370] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 16:51:42,507] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 16:51:42,856] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 16:51:43,213] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 16:51:43,609] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 16:51:43,920] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 16:51:44,276] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 16:51:44,396] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 16:51:44,396] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 16:51:44,882] INFO : Nº total de rejeitados: 60
+[2018-04-12 16:54:12,555] INFO : Kenan - Encontrada pagina 2 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 16:54:16,025] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 16:54:16,230] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 16:54:16,366] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 16:54:16,455] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 16:54:16,542] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 16:54:16,628] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 16:54:16,745] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 16:54:16,835] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 16:54:16,916] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 16:54:17,002] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 16:54:17,130] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 16:54:17,130] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 16:54:17,405] INFO : Nº total de rejeitados: 60
+[2018-04-12 16:56:33,658] INFO : Kenan - Encontrada pagina 3 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 16:56:37,456] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 16:56:37,587] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 16:56:37,724] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 16:56:37,893] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 16:56:38,050] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 16:56:38,157] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 16:56:38,246] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 16:56:38,341] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 16:56:38,433] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 16:56:38,507] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 16:56:38,741] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 16:56:38,742] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 16:56:39,027] INFO : Nº total de rejeitados: 60
+[2018-04-12 16:56:39,319] ERROR : Erro ao testar a conexao: PROATIVO_KENAN_CT1-1
+java.sql.SQLException: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1018)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:501)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:522)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:257)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:437)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:954)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:639)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:666)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:566)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:65)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:840)
+	at org.apache.commons.dbcp.PoolingDataSource.getConnection(PoolingDataSource.java:96)
+	at com.proativo.util.connection.DBPoolManager.testConnection(DBPoolManager.java:108)
+	at com.proativo.util.connection.DBPoolManager.getConnection(DBPoolManager.java:83)
+	at com.proativo.util.connection.Connections.getConn(Connections.java:75)
+	at com.proativo.util.connection.DynamicConnection.<init>(DynamicConnection.java:35)
+	at com.proativo.util.thread.ThreadManagerDynamicConnection.getDynamicConnections(ThreadManagerDynamicConnection.java:142)
+	at com.proativo.util.thread.ThreadManagerDynamicConnection.executar(ThreadManagerDynamicConnection.java:71)
+	at com.proativo.cenario.bo.load.Load.executar(Load.java:127)
+	at com.proativo.util.app.ProativoAppUtil.executaAplicacao(ProativoAppUtil.java:100)
+	at com.proativo.cenario.app.CenarioApp.main(CenarioApp.java:13)
+[2018-04-12 16:56:39,418] INFO : [PROATIVO_KENAN_CT1-1] URL1 falhou!
+[2018-04-12 16:56:39,418] INFO : ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+[2018-04-12 16:56:39,418] INFO : [PROATIVO_KENAN_CT1-2] Tentando URL2 ...
+[2018-04-12 16:56:39,418] ERROR : Ocorreu um erro ao obter uma conexao do Pool de Conexoes para a conexao PROATIVO_KENAN_CT1. Aguardando 5 minutos para realizar uma nova tentativa. Tentativa 2 de 5.
+java.sql.SQLException: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1018)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:501)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:522)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:257)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:437)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:954)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:639)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:666)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:566)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:65)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:840)
+	at org.apache.commons.dbcp.PoolingDataSource.getConnection(PoolingDataSource.java:96)
+	at com.proativo.util.connection.DBPoolManager.getConnection(DBPoolManager.java:84)
+	at com.proativo.util.connection.Connections.getConn(Connections.java:75)
+	at com.proativo.util.connection.DynamicConnection.<init>(DynamicConnection.java:35)
+	at com.proativo.util.thread.ThreadManagerDynamicConnection.getDynamicConnections(ThreadManagerDynamicConnection.java:142)
+	at com.proativo.util.thread.ThreadManagerDynamicConnection.executar(ThreadManagerDynamicConnection.java:71)
+	at com.proativo.cenario.bo.load.Load.executar(Load.java:127)
+	at com.proativo.util.app.ProativoAppUtil.executaAplicacao(ProativoAppUtil.java:100)
+	at com.proativo.cenario.app.CenarioApp.main(CenarioApp.java:13)
+[2018-04-12 16:59:17,721] INFO : Kenan - Encontrada pagina 4 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 16:59:20,900] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 16:59:21,151] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 16:59:21,231] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 16:59:21,367] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 16:59:21,462] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 16:59:21,610] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 16:59:21,689] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 16:59:21,779] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 16:59:21,894] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 16:59:21,981] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 16:59:22,084] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 16:59:22,085] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 16:59:22,427] INFO : Nº total de rejeitados: 60
+[2018-04-12 17:01:41,354] INFO : Kenan - Encontrada pagina 5 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 17:01:44,946] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 17:01:45,027] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 17:01:45,088] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 17:01:45,261] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 17:01:45,337] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 17:01:45,409] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 17:01:45,594] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 17:01:45,673] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 17:01:45,755] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 17:01:45,838] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 17:01:46,046] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 17:01:46,046] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 17:01:46,361] INFO : Nº total de rejeitados: 78
+[2018-04-12 17:04:13,083] INFO : Kenan - Encontrada pagina 6 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 17:04:16,441] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 17:04:16,500] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 17:04:16,908] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 17:04:17,088] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 17:04:17,283] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 17:04:17,445] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 17:04:17,704] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 17:04:17,867] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 17:04:18,027] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 17:04:18,199] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 17:04:18,399] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 17:04:18,399] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 17:04:18,643] INFO : Nº total de rejeitados: 416
+[2018-04-12 17:06:42,250] INFO : Kenan - Encontrada pagina 7 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 17:06:45,448] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 17:06:45,587] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 17:06:45,902] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 17:06:46,075] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 17:06:46,231] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 17:06:46,428] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 17:06:46,776] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 17:06:47,019] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 17:06:47,196] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 17:06:47,349] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 17:06:47,456] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 17:06:47,456] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 17:06:47,697] INFO : Nº total de rejeitados: 708
+[2018-04-12 17:09:18,677] INFO : Kenan - Encontrada pagina 8 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 17:09:21,965] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 17:09:22,035] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 17:09:24,974] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 17:09:25,036] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 17:09:25,113] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 17:09:25,193] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 17:09:25,280] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 17:09:25,375] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 17:09:25,466] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 17:09:25,540] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 17:09:25,673] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 17:09:25,673] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 17:09:25,923] INFO : Nº total de rejeitados: 708
+[2018-04-12 17:11:51,027] INFO : Kenan - Encontrada pagina 9 de 10 com 1000000 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 17:11:54,581] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 1.000.000 item(ns)
+[2018-04-12 17:11:54,653] INFO : Processados 100.000 objetos de 1.000.000 - 10%
+[2018-04-12 17:11:54,712] INFO : Processados 200.000 objetos de 1.000.000 - 20%
+[2018-04-12 17:11:57,780] INFO : Processados 300.000 objetos de 1.000.000 - 30%
+[2018-04-12 17:11:57,848] INFO : Processados 400.000 objetos de 1.000.000 - 40%
+[2018-04-12 17:11:57,933] INFO : Processados 500.000 objetos de 1.000.000 - 50%
+[2018-04-12 17:11:58,025] INFO : Processados 600.000 objetos de 1.000.000 - 60%
+[2018-04-12 17:11:58,109] INFO : Processados 700.000 objetos de 1.000.000 - 70%
+[2018-04-12 17:11:58,191] INFO : Processados 800.000 objetos de 1.000.000 - 80%
+[2018-04-12 17:11:58,264] INFO : Processados 900.000 objetos de 1.000.000 - 90%
+[2018-04-12 17:11:58,356] INFO : Processados 1.000.000 objetos de 1.000.000 - 100%
+[2018-04-12 17:11:58,357] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 17:11:58,772] INFO : Nº total de rejeitados: 724
+[2018-04-12 17:12:10,328] INFO : Kenan - Encontrada pagina 10 de 10 com 14141 registros do lote P09JNL01.180412_031625_0000512903
+[2018-04-12 17:12:13,667] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento2 em 50 thread(s) para 14.141 item(ns)
+[2018-04-12 17:12:13,670] INFO : Processados 1.415 objetos de 14.141 - 10%
+[2018-04-12 17:12:13,674] INFO : Processados 2.829 objetos de 14.141 - 20%
+[2018-04-12 17:12:13,677] INFO : Processados 4.243 objetos de 14.141 - 30%
+[2018-04-12 17:12:13,679] INFO : Processados 5.657 objetos de 14.141 - 40%
+[2018-04-12 17:12:13,683] INFO : Processados 7.071 objetos de 14.141 - 50%
+[2018-04-12 17:12:13,685] INFO : Processados 8.485 objetos de 14.141 - 60%
+[2018-04-12 17:12:13,687] INFO : Processados 9.899 objetos de 14.141 - 70%
+[2018-04-12 17:12:13,689] INFO : Processados 11.313 objetos de 14.141 - 80%
+[2018-04-12 17:12:13,690] INFO : Processados 12.727 objetos de 14.141 - 90%
+[2018-04-12 17:12:13,692] INFO : Processados 14.141 objetos de 14.141 - 100%
+[2018-04-12 17:12:13,693] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento2. Executadas 50 threads
+[2018-04-12 17:12:13,929] INFO : Nº total de rejeitados: 813
+[2018-04-12 17:12:13,929] INFO : Util - Buscar dados planilha MONITOR_CONTABIL_CONF.
+[2018-04-12 17:12:15,512] INFO : Util - Arquivo de configuração MONITOR_CONTABIL_CONF não existe no caminho. Erro: null
+[2018-04-12 17:12:15,512] INFO : Proativo - Buscando tabela verdade na tabela MONITOR_CONTABIL_CONF.
+[2018-04-12 17:12:26,131] INFO : Kenan - Executando batimento de informações:
+[2018-04-12 17:12:29,374] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento em 50 thread(s) para 38.510 item(ns)
+[2018-04-12 17:12:39,740] INFO : Processados 3.851 objetos de 38.510 - 10%
+[2018-04-12 17:12:49,574] INFO : Processados 7.702 objetos de 38.510 - 20%
+[2018-04-12 17:12:59,433] INFO : Processados 11.553 objetos de 38.510 - 30%
+[2018-04-12 17:13:09,920] INFO : Processados 15.404 objetos de 38.510 - 40%
+[2018-04-12 17:13:19,990] INFO : Processados 19.255 objetos de 38.510 - 50%
+[2018-04-12 17:13:30,354] INFO : Processados 23.106 objetos de 38.510 - 60%
+[2018-04-12 17:13:41,322] INFO : Processados 26.957 objetos de 38.510 - 70%
+[2018-04-12 17:13:51,556] INFO : Processados 30.808 objetos de 38.510 - 80%
+[2018-04-12 17:14:02,322] INFO : Processados 34.659 objetos de 38.510 - 90%
+[2018-04-12 17:14:12,936] INFO : Processados 38.510 objetos de 38.510 - 100%
+[2018-04-12 17:14:12,936] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento. Executadas 50 threads
+[2018-04-12 17:14:13,157] INFO : Kenan - Inserindo lista de rejeitados.
+[2018-04-12 17:14:16,395] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadLoadRejeitados em 50 thread(s) para 2.519 item(ns)
+[2018-04-12 17:14:16,633] INFO : Processados 252 objetos de 2.519 - 10%
+[2018-04-12 17:14:16,816] INFO : Processados 504 objetos de 2.519 - 20%
+[2018-04-12 17:14:16,995] INFO : Processados 756 objetos de 2.519 - 30%
+[2018-04-12 17:14:17,168] INFO : Processados 1.008 objetos de 2.519 - 40%
+[2018-04-12 17:14:17,311] INFO : Processados 1.260 objetos de 2.519 - 50%
+[2018-04-12 17:14:17,458] INFO : Processados 1.512 objetos de 2.519 - 60%
+[2018-04-12 17:14:17,627] INFO : Processados 1.764 objetos de 2.519 - 70%
+[2018-04-12 17:14:17,786] INFO : Processados 2.016 objetos de 2.519 - 80%
+[2018-04-12 17:14:17,946] INFO : Processados 2.268 objetos de 2.519 - 90%
+[2018-04-12 17:14:18,165] INFO : Processados 2.519 objetos de 2.519 - 100%
+[2018-04-12 17:14:18,166] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadLoadRejeitados. Executadas 50 threads
+[2018-04-12 17:14:18,356] INFO : Quantidade de objetos carregados: 38510
+[2018-04-12 17:14:18,356] INFO : Quantidade de contas contábeis zeradas corrigidas: 0
+[2018-04-12 17:14:18,356] INFO : Quantidade de erros detectados: 2519
+[2018-04-12 17:14:18,356] INFO : Enviando e-mail de report.
+[2018-04-12 17:14:18,801] ERROR : Falha ao Inserir Controle Execucao. 
+java.sql.SQLSyntaxErrorException: ORA-00942: a tabela ou view não existe
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1059)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:522)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:257)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:587)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:225)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:53)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1150)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:4798)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4875)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:102)
+	at com.proativo.cenario.dao.OraProativo.proativoInsereControleExecucao(OraProativo.java:69)
+	at com.proativo.cenario.bo.load.Load.executar(Load.java:186)
+	at com.proativo.util.app.ProativoAppUtil.executaAplicacao(ProativoAppUtil.java:100)
+	at com.proativo.cenario.app.CenarioApp.main(CenarioApp.java:13)
+[2018-04-12 17:14:18,868] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Action
+[2018-04-12 17:14:18,869] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Validation
+[2018-04-12 17:14:18,869] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Report
+[2018-04-12 17:14:18,893] INFO : Finalizando cenario MONITOR_CONF_CONTABIL - Execucao 82948 - Tempo de execucao: 00:25:43

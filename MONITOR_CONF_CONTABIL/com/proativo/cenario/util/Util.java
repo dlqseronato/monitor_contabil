@@ -24,7 +24,7 @@ public class Util {
 		String sdate= sdf.format(d);
 		List<String> ls = new ArrayList<String>();
 		try {
-			fw = new FileWriter("d:\\MONITOR_CONTABIL_"+sdate+".txt");
+			fw = new FileWriter("MONITOR_CONTABIL_"+sdate+".txt");
 
 			pw = new PrintWriter(fw);
 			pw.printf("%s %s %s%n","RELATÓRIO DE CONFIGURAÇÕES CONTÁBEIS","Data da execução: ",sdate);
@@ -127,7 +127,7 @@ public class Util {
 			try {
 				pw.close();
 				fw.close();
-				return new File("d:\\MONITOR_CONTABIL_"+sdate+".txt");
+				return new File("MONITOR_CONTABIL_"+sdate+".txt");
 			} catch (IOException e) {
 				Log.error("Não foi possível fechar arquivo.", e);
 			}

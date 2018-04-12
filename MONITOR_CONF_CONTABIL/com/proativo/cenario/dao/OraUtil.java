@@ -26,16 +26,16 @@ public class OraUtil {
 		// TODO Auto-generated method stub
 		JFileChooser fc; 
 		try {
-			Files.createDirectories(Paths.get("/app/gvt/scripts/proativo/cenarios/MONITOR_CONF_CONTABIL/input"));
+			Files.createDirectories(Paths.get("/app/gvt/scripts/proativo/cenarios/monitor_conf_contabil/input"));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		File f = new File("/app/gvt/scripts/proativo/cenarios/MONITOR_CONF_CONTABIL/input/GARANTIA_CONTABIL_CONF.xls");
+		File f = new File("/app/gvt/scripts/proativo/cenarios/monitor_conf_contabil/input/GARANTIA_CONTABIL_CONF.xls");
 		//File f = new File("D:/GARANTIA_CONTABIL_CONF.xls");
 		JButton open = new JButton();
 		fc = new JFileChooser();
-		fc.setCurrentDirectory(new java.io.File("/app/gvt/scripts/proativo/cenarios/MONITOR_CONF_CONTABIL/input/"));
+		fc.setCurrentDirectory(new java.io.File("/app/gvt/scripts/proativo/cenarios/monitor_conf_contabil/input/"));
 		fc.setDialogTitle("Buscar tabela verdade");
 		FileNameExtensionFilter filter = new FileNameExtensionFilter("Arquivos Excel", "xls");
 		fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
