@@ -149,7 +149,6 @@ public class Load extends Processo {
 				listaVerdade.add(ob);
 			}
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			Log.info("Util - Arquivo de configuração MONITOR_CONTABIL_CONF não existe no caminho."+ " Erro: " + e.getCause());
 			ArquivoExiste = false;
 		}
@@ -186,7 +185,13 @@ public class Load extends Processo {
 		Log.info("Enviando e-mail de report.");
 		Email.enviaEmail(cenario, listaVerdade.size(), listaVerdade.size() - listaRejeitados.size(), listaRejeitados.size(), listaRejeitados);
 
-		proativo.proativoInsereControleExecucao(cenario.getIdExecucao(), listaRejeitados.size(), lote.getLote());
+		try {
+			proativo.proativoInsereControleExecucao(cenario.getIdExecucao(), listaRejeitados.size(), lote.getLote());
+		}catch (NullPointerException e) {
+			Log.info("WARNING - Não há lotes na Journals para inserir na Controle.");
+			proativo.proativoInsereControleExecucao(cenario.getIdExecucao(), listaRejeitados.size(), "LOTE INVALIDO");
+		}
+			
 		super.setChanged();
 		super.notifyObservers();
 	}
