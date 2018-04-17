@@ -48,8 +48,8 @@ public class Load extends Processo {
 	private OraUtil util;
 	private OraProativo proativo;
 	private OraKenan kenan;
-	
-	
+
+
 	public Load(){
 		this.tmdc = new ThreadManagerDynamicConnection();
 		util = new OraUtil();
@@ -59,7 +59,7 @@ public class Load extends Processo {
 		//listaRejeitados = new ArrayList<ProdutoVerdadeVo>();
 		listaRejeitados = new ArrayList<ErroVo>();
 		listaCorrigidos = new ArrayList<ProdutoVerdadeVo>();
-		}
+	}
 
 
 	public static synchronized void addAllLoadRejectList(List<ErroVo> list){
@@ -74,8 +74,8 @@ public class Load extends Processo {
 	public static synchronized void addLoadList(List<ProdutoVerdadeVo> list){
 		listaVerdade.addAll(list);
 	}
-	
-	
+
+
 	public static List<ErroVo> getListaRejeitados() {
 		return listaRejeitados;
 	}
@@ -89,49 +89,52 @@ public class Load extends Processo {
 	public static List<DivisaoVo> getDivisoes(){
 		return divisoes;
 	}
-	
+
 	public static List<OrdemInternaVo> getOrdensInternas(){
 		return ordensInternas;
 	}
-	
+
 	public static List<CentroDeCustoVo> getCentrosDeCusto(){
 		return centrosCusto;
 	}
-	
+
 
 	public void executar(CenarioVo cenario, ProcessamentoCicloVo ciclo) {	
-		
+
 		Log.info("Kenan - Buscando configurações atuais da Journals.");
 		listaSAP = kenan.kenanBuscaConfiguracoesJnls();
-		
+
 		Log.info("Kenan - Buscando ultimo lote processado da Journals.");
 		lote = kenan.kenanBuscarLotesJnls();
-		
+
 		Log.info("Kenan - Buscando divisões pré configuradas no Kenan.");
 		divisoes = kenan.kenanBuscarDivisoes();
-		
+
 		Log.info("Kenan - Buscando ordens internas pré configuradas no Kenan.");
 		ordensInternas = kenan.kenanBuscaOrdemInterna();
-		
+
 		Log.info("Kenan - Buscando centro de custos pré configuradas no Kenan.");
 		centrosCusto = kenan.kenanBuscaCentroDeCusto();
-		
-		Log.info("Kenan - Buscando quantidade de paginas da query da cont det.");
-		qtdPaginas = kenan.kenanBuscaContDetQtdPaginas(lote.getLote());
-		
-		Log.info("Kenan - Buscando lançamentos referente ao último lote "+lote.getLote()+" na GVT_KENAN_SAP_SPED_CONT_DET.");
-		for (int i = 1; i <= qtdPaginas; i++) {
-			contDetList = kenan.kenanBuscarContDet(lote.getLote(),i);
-			Log.info("Kenan - Encontrada pagina "+i+" de "+qtdPaginas+" com "+contDetList.size()+" registros do lote "+lote.getLote());
-			try {
-				tmdc.executar(contDetList, new ThreadBatimento2( cenario,tmdc,contDetList.size(),divisoes,ordensInternas), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1, Connections.CONN_KENAN_CT+2 ,Connections.CONN_PROATIVO);
-			} catch (NullPointerException e) {
-				Log.info("Erro NullPointerException");
+
+		try {
+			Log.info("Kenan - Buscando quantidade de paginas da query da cont det.");
+			qtdPaginas = kenan.kenanBuscaContDetQtdPaginas(lote.getLote());
+
+			Log.info("Kenan - Buscando lançamentos referente ao último lote "+lote.getLote()+" na GVT_KENAN_SAP_SPED_CONT_DET.");
+			for (int i = 1; i <= qtdPaginas; i++) {
+				contDetList = kenan.kenanBuscarContDet(lote.getLote(),i);
+				Log.info("Kenan - Encontrada pagina "+i+" de "+qtdPaginas+" com "+contDetList.size()+" registros do lote "+lote.getLote());
+				try {
+					tmdc.executar(contDetList, new ThreadBatimento2( cenario,tmdc,contDetList.size(),divisoes,ordensInternas), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1, Connections.CONN_KENAN_CT+2 ,Connections.CONN_PROATIVO);
+				} catch (NullPointerException e) {
+					Log.info("Erro NullPointerException");
+				}
+
+				Log.info("Nº total de rejeitados: "+listaRejeitados.size());		
 			}
-			
-			Log.info("Nº total de rejeitados: "+listaRejeitados.size());		
-		}
-		
+		} catch (NullPointerException e) {
+			Log.info("WARNING: Não há lotes da Journals do mês atual para validar.");
+		}		
 		Log.info("Util - Buscar dados planilha MONITOR_CONTABIL_CONF.");
 		Planilha p;
 		boolean ArquivoExiste = false;
@@ -155,34 +158,34 @@ public class Load extends Processo {
 			kenan.kenanLimparTabelaVerdade();
 			Log.info("Proativo - Inserindo novas configurações na tabela MONITOR_CONTABIL_CONF");
 			tmdc.executar(listaVerdade, new ThreadLoadTabelaVerdade( cenario, tmdc,listaVerdade.size()), cenario.getQuantidadeThreads(), Connections.CONN_PROATIVO);
-			
+
 		}else{
 			Log.info("Proativo - Buscando tabela verdade na tabela MONITOR_CONTABIL_CONF.");
 			listaVerdade = kenan.kenanBuscarTabelaVerdade();
 		}
-		
 
-		
+
+
 		//tmdc.executar(listaVerdade, new ThreadLoadSAP( cenario, tmdc,listaVerdade.size()), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1);
-				
+
 		Log.info("Kenan - Executando batimento de informações:");
 		tmdc.executar(listaVerdade, new ThreadBatimento( cenario,tmdc,listaVerdade.size(),listaSAP), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1, Connections.CONN_KENAN_CT+2 ,Connections.CONN_PROATIVO);
 		//tmdc.executar(listaVerdade, new ThreadBatimento( cenario,tmdc,listaVerdade.size()), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1, Connections.CONN_KENAN_CT+2 );
-		
+
 		listaSAP.clear();
 		listaSAP = new ArrayList<ProdutoSAPVo>();
-		
+
 		Log.info("Kenan - Inserindo lista de rejeitados.");
 		//tmdc.executar(listaRejeitados, new ThreadLoadRejeitados( cenario, tmdc,listaRejeitados.size()), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1);
 		tmdc.executar(listaRejeitados, new ThreadLoadRejeitados( cenario, tmdc,listaRejeitados.size()), cenario.getQuantidadeThreads(), Connections.CONN_PROATIVO);
-	
+
 		Log.info("Quantidade de objetos carregados: "+listaVerdade.size());
 		Log.info("Quantidade de contas contábeis zeradas corrigidas: "+listaCorrigidos.size());
 		Log.info("Quantidade de erros detectados: "+listaRejeitados.size());
-		
+
 		Log.info("Enviando e-mail de report.");
 		Email.enviaEmail(cenario, listaVerdade.size(), listaVerdade.size() - listaRejeitados.size(), listaRejeitados.size(), listaRejeitados);
-		
+
 		proativo.proativoInsereControleExecucao(cenario.getIdExecucao(), listaRejeitados.size(), lote.getLote());
 		super.setChanged();
 		super.notifyObservers();
