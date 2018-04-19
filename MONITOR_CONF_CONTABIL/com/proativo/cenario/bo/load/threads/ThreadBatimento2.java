@@ -259,11 +259,6 @@ public class ThreadBatimento2 extends ActionAbstract<ContDetVo> {
 				erro = new ErroVo(ob.getId(),ob.getElement(),ob.getTecnologia(),0,0,ob.getTipoLancamento(),ob.getAccountCategory(),ob.getOpenItemId(),15);
 				addToRejectList(erro, ob, erro.getErrorType(),"","","");
 			}
-			/*
-			if(	ob.getOpenItemId() == 0) {
-				erro = new ErroVo(ob.getId(),ob.getElement(),ob.getTecnologia(),0,0,ob.getTipoLancamento(),ob.getAccountCategory(),ob.getOpenItemId(),16);
-				addToRejectList(erro, ob, erro.getErrorType(),"","","");
-			}*/
 
 
 		}
@@ -295,10 +290,6 @@ public class ThreadBatimento2 extends ActionAbstract<ContDetVo> {
 		case 15:
 			erro.setMsgError("Produto: "+ob.getElement()+" Tipo: "+ob.getTecnologia()+" Erro: Divisao nula na ContDet.");
 			break;
-			/*
-		case 16:
-			erro.setMsgError("Produto: "+ob.getElement()+" do tipo "+ob.getTecnologia()+" Erro: Open item = 0 na ContDet.");
-			break;*/
 		default:
 			break;
 		}
