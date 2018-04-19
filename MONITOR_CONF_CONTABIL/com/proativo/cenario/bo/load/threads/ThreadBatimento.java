@@ -1,15 +1,14 @@
 package com.proativo.cenario.bo.load.threads;
 
 
-import java.util.ArrayList;
+
 import java.util.Calendar;
 import java.util.List;
 
 import com.proativo.cenario.bo.load.Load;
-import com.proativo.cenario.dao.OraKenan;
 import com.proativo.cenario.dao.OraProativo;
 import com.proativo.cenario.vo.ErroVo;
-import com.proativo.cenario.vo.ImpostoVo;
+
 import com.proativo.cenario.vo.ProdutoSAPVo;
 import com.proativo.cenario.vo.ProdutoVerdadeVo;
 import com.proativo.util.connection.Connections;
@@ -18,7 +17,6 @@ import com.proativo.util.thread.ThreadManagerDynamicConnection;
 import com.proativo.util.vo.CenarioVo;
 
 public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
-	private OraKenan kenan;
 	private OraProativo proativo;
 	List<ProdutoSAPVo> listaSAP;
 
@@ -26,7 +24,6 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 		super();
 		this.tmdc = tmdc;
 		this.cenario = cenario;
-		this.kenan = new OraKenan();
 		this.proativo = new OraProativo();
 		this.totalLista = qtdeCasos.floatValue();
 		this.listaSAP = listaSAP;
@@ -35,22 +32,12 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 	@Override
 	public void exec(ProdutoVerdadeVo ob) {	
 		ProdutoVerdadeVo newOb = ob;
-		List<Integer> lTaxType;
-		String vPrefix = null;
 		ErroVo errorOb;
-		ImpostoVo iOb;
 		boolean rowFixed = false;
-		int validarImposto;
 
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.MONTH, -3);
 		newOb.setErros( new ErroVo());
-
-		//Cargas auxiliares à decisão de montagem da conta contábil de imposto
-		//lTaxType = kenan.kenanBuscaTaxTypeCode(ob);
-		lTaxType = new ArrayList<Integer>();
-		//validarImposto.kenan.
-
 
 		//Itera o objeto da tabela verdade dentro da tabela full da journals para bater as informações
 		for (ProdutoSAPVo sapOb : listaSAP) {
@@ -185,8 +172,6 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 	}
 
 	public void addToRejectList(ErroVo erro,ProdutoVerdadeVo ob,ProdutoSAPVo sapOb,int codigoErro) {
-		String tipoConta = "";
-
 		switch (codigoErro) {
 		case 2:
 			erro.setMsgError("Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil débito faturada "+ob.getcContabilDebitoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());

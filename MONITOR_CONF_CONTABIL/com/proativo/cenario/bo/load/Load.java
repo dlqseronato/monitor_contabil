@@ -2,7 +2,6 @@ package com.proativo.cenario.bo.load;
 
 import java.io.FileNotFoundException;
 import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -148,7 +147,7 @@ public class Load extends Processo {
 			ArquivoExiste = true;
 			ProdutoVerdadeVo ob;
 			for (int i = 0; i < p.getPlanilha().size(); i++) {
-				ob = new ProdutoVerdadeVo();
+				ob = new ProdutoVerdadeVo();	
 				ob.setId(100000+i);
 				ob.setValues(p, i);
 				listaVerdade.add(ob);

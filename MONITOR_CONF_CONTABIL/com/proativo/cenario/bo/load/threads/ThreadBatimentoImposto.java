@@ -9,7 +9,6 @@ import com.proativo.cenario.bo.load.Load;
 import com.proativo.cenario.dao.OraKenan;
 import com.proativo.cenario.dao.OraProativo;
 import com.proativo.cenario.vo.ErroVo;
-import com.proativo.cenario.vo.ImpostoVo;
 import com.proativo.cenario.vo.ProdutoSAPVo;
 import com.proativo.cenario.vo.ProdutoVerdadeVo;
 import com.proativo.util.connection.Connections;
@@ -42,9 +41,8 @@ public class ThreadBatimentoImposto extends ActionAbstract<ProdutoVerdadeVo> {
 		String vPrefix = null;
 		ErroVo errorOb;
 		erros = new ErroVo();
-		ImpostoVo iOb;
 		boolean rowFixed = false;
-		int validarImposto;
+
 
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.MONTH, -3);
@@ -62,7 +60,6 @@ public class ThreadBatimentoImposto extends ActionAbstract<ProdutoVerdadeVo> {
 				if(sapOb.getJnlsIdType() == 1000) {
 					if(sapOb.getJnlsTaxTypeCode() != 0 && sapOb.getJnlsTaxTypeCode() != -1 && lTaxType.contains(sapOb.getJnlsTaxTypeCode())) {
 						for (Integer taxTypeCode : lTaxType) {
-							iOb = new ImpostoVo();
 
 							if(taxTypeCode == sapOb.getJnlsTaxTypeCode()) {
 								newOb.setIdType(sapOb.getJnlsIdType());
@@ -143,8 +140,6 @@ public class ThreadBatimentoImposto extends ActionAbstract<ProdutoVerdadeVo> {
 	}
 
 	public void addToRejectList(ErroVo erro,ProdutoVerdadeVo ob,ProdutoSAPVo sapOb,int codigoErro) {
-		String tipoConta = "";
-
 		switch (codigoErro) {
 		case 2:
 			erro.setMsgError("ID: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil débito faturada "+ob.getcContabilDebitoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());

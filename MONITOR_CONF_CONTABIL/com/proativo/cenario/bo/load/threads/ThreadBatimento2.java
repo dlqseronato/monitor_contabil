@@ -4,21 +4,16 @@ package com.proativo.cenario.bo.load.threads;
 
 import java.util.List;
 import com.proativo.cenario.bo.load.Load;
-import com.proativo.cenario.dao.OraKenan;
-import com.proativo.cenario.dao.OraProativo;
 import com.proativo.cenario.vo.CentroDeCustoVo;
 import com.proativo.cenario.vo.ContDetVo;
 import com.proativo.cenario.vo.DivisaoVo;
 import com.proativo.cenario.vo.ErroVo;
 import com.proativo.cenario.vo.OrdemInternaVo;
-import com.proativo.util.log.Log;
 import com.proativo.util.thread.ActionAbstract;
 import com.proativo.util.thread.ThreadManagerDynamicConnection;
 import com.proativo.util.vo.CenarioVo;
 
 public class ThreadBatimento2 extends ActionAbstract<ContDetVo> {
-	private OraKenan kenan;
-	private OraProativo proativo;
 
 	List<DivisaoVo> divisoes;
 	List<OrdemInternaVo> ordensInternas;
@@ -27,8 +22,6 @@ public class ThreadBatimento2 extends ActionAbstract<ContDetVo> {
 		super();
 		this.tmdc = tmdc;
 		this.cenario = cenario;
-		this.kenan = new OraKenan();
-		this.proativo = new OraProativo();
 		this.totalLista = qtdeCasos.floatValue();
 		this.ordensInternas = ordensInternas;
 		this.divisoes = divisoes;
@@ -36,7 +29,6 @@ public class ThreadBatimento2 extends ActionAbstract<ContDetVo> {
 
 	@Override
 	public void exec(ContDetVo ob) {	
-		String divisao;	
 		ErroVo erro;
 		try {
 			
@@ -47,7 +39,6 @@ public class ThreadBatimento2 extends ActionAbstract<ContDetVo> {
 			for (DivisaoVo div : divisoes) {
 				if(ob.getEmpresaMktCode() == div.getMktCode()) {
 					int codUf = Integer.parseInt(div.getDivisao().substring(0, 2));
-					String uf = div.getDivisao().substring(2);
 					String ordemInterna;
 					String centroCusto;
 
