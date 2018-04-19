@@ -124,9 +124,8 @@ public class Load extends Processo {
 
 			Log.info("Kenan - Buscando lançamentos referente ao último lote "+lote.getLote()+" na GVT_KENAN_SAP_SPED_CONT_DET.");
 			for (int i = 1; i <= qtdPaginas; i++) {
-				//contDetList = kenan.kenanBuscarContDet(lote.getLote(),i);
 				contDetList = new ArrayList<>();
-				//contDetList.add(new ContDetVo(1, 18, sdf.format("16/04/18"), 1, 1, 21152514, 21152514, 0,null, 0, 1, "M02", "29SP", "39TR070100", 928, "T39GFNFA", "VOZ COBRE - Doações"))
+				//contDetList = kenan.kenanBuscarContDet(lote.getLote(),i);
 				//contDetList.add(new ContDetVo(id, empresaMktCode, dataDocumento, tipoLancamento, idType2, contaContabilDb, contaConbabilCr, accountNo, externalId, accountCategory, openItemId, codAtribuicao, divisao, centroCusto, element, ordemInterna, tecnologia));				
 				contDetList.add(new ContDetVo(1, 31, new Date(System.currentTimeMillis()), 1, 1, 21152911, 11211151, 0, null, 10, 18, "M02", "39RN", "39TR070100", 928, "T39GFNFA", "VOZ COBRE - Doações"));
 				Log.info("Kenan - Encontrada pagina "+i+" de "+qtdPaginas+" com "+contDetList.size()+" registros do lote "+lote.getLote());
@@ -171,13 +170,11 @@ public class Load extends Processo {
 
 		Log.info("Kenan - Executando batimento de informações:");
 		tmdc.executar(listaVerdade, new ThreadBatimento( cenario,tmdc,listaVerdade.size(),listaSAP), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1, Connections.CONN_KENAN_CT+2 ,Connections.CONN_PROATIVO);
-		//tmdc.executar(listaVerdade, new ThreadBatimento( cenario,tmdc,listaVerdade.size()), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1, Connections.CONN_KENAN_CT+2 );
 
 		listaSAP.clear();
 		listaSAP = new ArrayList<ProdutoSAPVo>();
 
 		Log.info("Kenan - Inserindo lista de rejeitados.");
-		//tmdc.executar(listaRejeitados, new ThreadLoadRejeitados( cenario, tmdc,listaRejeitados.size()), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1);
 		tmdc.executar(listaRejeitados, new ThreadLoadRejeitados( cenario, tmdc,listaRejeitados.size()), cenario.getQuantidadeThreads(), Connections.CONN_PROATIVO);
 
 		Log.info("Quantidade de objetos carregados: "+listaVerdade.size());
