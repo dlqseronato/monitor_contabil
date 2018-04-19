@@ -1,0 +1,53 @@
+RELATÓRIO DE CONFIGURAÇÕES CONTÁBEIS Data da execução:  20180419113216
+Id Execução: 83244 
+Quantidade verificada: 0
+Quantidade Ok: -18
+Quantidade de erros: 18
+
+ERRO: ID_VALUE NÃO ENCONTRADO NA JOURNALS
+
+ERRO: RC - CONTA CONTABIL FATURADA DÉBITO INCORRETA
+
+ERRO: RC - CONTA CONTABIL FATURADA CRÉDITO INCORRETA
+
+ERRO: RC - CONTA CONTABIL A FATURAR DÉBITO INCORRETA
+
+ERRO: RC - CONTA CONTABIL A FATURAR CRÉDITO INCORRETA
+
+ERRO: ADJ - CONTA CONTABIL FATURADA DÉBITO INCORRETA
+
+ERRO: ADJ - CONTA CONTABIL FATURADA CRÉDITO INCORRETA
+
+ERRO: ADJ - CONTA CONTABIL A FATURAR DÉBITO INCORRETA
+
+ERRO: ADJ - CONTA CONTABIL A FATURAR CRÉDITO INCORRETA
+
+ERRO: DIVISAO ESTÁ INCORRETA.
+Product : 928 Error Type:  10 Description:  Produto: 928 do tipo VOZ COBRE - Doações Erro: Divisão 39RN está incorreta. A correta é 30PR
+Product : 928 Error Type:  10 Description:  Produto: 928 do tipo VOZ COBRE - Doações Erro: Divisão 39RN está incorreta. A correta é 30PR
+Product : 928 Error Type:  10 Description:  Produto: 928 do tipo VOZ COBRE - Doações Erro: Divisão 39RN está incorreta. A correta é 30PR
+Product : 928 Error Type:  10 Description:  Produto: 928 do tipo VOZ COBRE - Doações Erro: Divisão 39RN está incorreta. A correta é 30PR
+Product : 928 Error Type:  10 Description:  Produto: 928 do tipo VOZ COBRE - Doações Erro: Divisão 39RN está incorreta. A correta é 30PR
+Product : 928 Error Type:  10 Description:  Produto: 928 do tipo VOZ COBRE - Doações Erro: Divisão 39RN está incorreta. A correta é 30PR
+
+ERRO: ORDEM INTERNA ESTÁ INCORRETA.
+Product : 928 Error Type:  11 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Ordem interna T39GFNFA está incorreta. A correta é T30GFNFA
+Product : 928 Error Type:  11 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Ordem interna T39GFNFA está incorreta. A correta é T30GFNFA
+Product : 928 Error Type:  11 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Ordem interna T39GFNFA está incorreta. A correta é T30GFNFA
+Product : 928 Error Type:  11 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Ordem interna T39GFNFA está incorreta. A correta é T30GFNFA
+Product : 928 Error Type:  11 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Ordem interna T39GFNFA está incorreta. A correta é T30GFNFA
+Product : 928 Error Type:  11 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Ordem interna T39GFNFA está incorreta. A correta é T30GFNFA
+
+ERRO: CENTRO DE CUSTO ESTÁ INCORRETO.
+Product : 928 Error Type:  12 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Centro de custo 39TR070100 está incorreto. O correto é 30TR070000
+Product : 928 Error Type:  12 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Centro de custo 39TR070100 está incorreto. O correto é 30TR070000
+Product : 928 Error Type:  12 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Centro de custo 39TR070100 está incorreto. O correto é 30TR070000
+Product : 928 Error Type:  12 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Centro de custo 39TR070100 está incorreto. O correto é 30TR070000
+Product : 928 Error Type:  12 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Centro de custo 39TR070100 está incorreto. O correto é 30TR070000
+Product : 928 Error Type:  12 Description:  Produto: 928 Tipo: VOZ COBRE - Doações Erro: Centro de custo 39TR070100 está incorreto. O correto é 30TR070000
+
+ERRO: CENTRO DE CUSTO NULO NA CONTDET.
+
+ERRO: ORDEM INTERNA NULA NA CONTDET.
+
+ERRO: DIVISAO NULA NA CONTDET.

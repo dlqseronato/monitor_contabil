@@ -34,91 +34,91 @@ public class Util {
 			
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 1) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: RC - CONTA CONTABIL FATURADA DÉBITO INCORRETA");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 2) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: RC - CONTA CONTABIL FATURADA CRÉDITO INCORRETA");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 3) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: RC - CONTA CONTABIL A FATURAR DÉBITO INCORRETA");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 4) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: RC - CONTA CONTABIL A FATURAR CRÉDITO INCORRETA");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 5) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: ADJ - CONTA CONTABIL FATURADA DÉBITO INCORRETA");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 6) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: ADJ - CONTA CONTABIL FATURADA CRÉDITO INCORRETA");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 7) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: ADJ - CONTA CONTABIL A FATURAR DÉBITO INCORRETA");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 8) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: ADJ - CONTA CONTABIL A FATURAR CRÉDITO INCORRETA");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 9) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: DIVISAO ESTÁ INCORRETA.");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 10) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: ORDEM INTERNA ESTÁ INCORRETA.");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 11) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: CENTRO DE CUSTO ESTÁ INCORRETO.");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 12) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: CENTRO DE CUSTO NULO NA CONTDET.");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 13) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: ORDEM INTERNA NULA NA CONTDET.");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 14) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 			pw.printf("%n%s%n", "ERRO: DIVISAO NULA NA CONTDET.");
 			for (ErroVo ob : lista) {
 				if(ob.getErrorType() == 15) {
-					pw.printf("%s %d %s %d %s %s%n","PRODUTO :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
+					pw.printf("%s %d %s %d %s %s%n","Product :",ob.getIdProdutoKenan(),"Error Type: ",ob.getErrorType(),"Description: ",ob.getMsgError());
 				}
 			}
 		} catch (IOException e) {

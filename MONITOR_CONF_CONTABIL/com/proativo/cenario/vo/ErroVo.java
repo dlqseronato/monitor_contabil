@@ -3,6 +3,7 @@ package com.proativo.cenario.vo;
 public class ErroVo{
 	private int id;
 	private int idProdutoKenan;
+	private String descricaoProduto;
 	private int jnlsCodeId;
 	private int useCode;
 	private int idType;
@@ -14,7 +15,25 @@ public class ErroVo{
 	public ErroVo() {
 		super();
 	}
-	public ErroVo(int id, int idProdutoKenan, int jnlsCodeId, int useCode, int idType, int accountCategory, int openItemId, int errorType) {
+	
+
+	public ErroVo(int id, int idProdutoKenan, String descricaoProduto, int jnlsCodeId, int useCode, int idType,
+			int accountCategory, int openItemId, int errorType, String msgError) {
+		super();
+		this.id = id;
+		this.idProdutoKenan = idProdutoKenan;
+		this.descricaoProduto = descricaoProduto;
+		this.jnlsCodeId = jnlsCodeId;
+		this.useCode = useCode;
+		this.idType = idType;
+		this.accountCategory = accountCategory;
+		this.openItemId = openItemId;
+		this.errorType = errorType;
+		this.msgError = msgError;
+	}
+
+
+	public ErroVo(int id, int idProdutoKenan,String descricaoProduto,  int jnlsCodeId, int useCode, int idType, int accountCategory, int openItemId, int errorType) {
 		super();
 		this.id = id;
 		this.idProdutoKenan = idProdutoKenan;
@@ -24,6 +43,7 @@ public class ErroVo{
 		this.accountCategory = accountCategory;
 		this.openItemId = openItemId;
 		this.errorType = errorType;
+		this.descricaoProduto = descricaoProduto;
 	}
 	
 	public int getId() {
@@ -80,7 +100,13 @@ public class ErroVo{
 	public void setMsgError(String msgError) {
 		this.msgError = msgError;
 	}
-	
+	public String getDescricaoProduto() {
+		return descricaoProduto;
+	}
+	public void setDescricaoProduto(String descricaoProduto) {
+		this.descricaoProduto = descricaoProduto;
+	}
+
 	
 	
 }

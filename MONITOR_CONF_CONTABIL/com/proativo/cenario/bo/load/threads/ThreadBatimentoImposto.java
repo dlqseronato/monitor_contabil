@@ -110,7 +110,7 @@ public class ThreadBatimentoImposto extends ActionAbstract<ProdutoVerdadeVo> {
 											newOb.setcContabilAdjDebitoAFaturar(sapOb.getJnlsCContabilDebito());
 											rowFixed = true;
 										}else {
-											errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),8);
+											errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),newOb.getDescricaoProduto(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),8);
 											addToRejectList(errorOb,newOb, sapOb, 8);
 										}
 									}
@@ -121,7 +121,7 @@ public class ThreadBatimentoImposto extends ActionAbstract<ProdutoVerdadeVo> {
 											newOb.setcContabilAdjCreditoAFaturar(sapOb.getJnlsCContabilCredito());
 											rowFixed = true;
 										}else {
-											errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),9);
+											errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),newOb.getDescricaoProduto(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),9);
 											addToRejectList(errorOb,newOb, sapOb, 9);
 										}
 									}
@@ -136,7 +136,7 @@ public class ThreadBatimentoImposto extends ActionAbstract<ProdutoVerdadeVo> {
 		//Itera o objeto da tabela verdade dentro da tabela full da journals para bater as informações
 
 		if (rowFixed) {
-			kenan.kenanAtualizaTabelaVerdade(newOb, tmdc.getAvailableConnection(Connections.CONN_PROATIVO));
+			proativo.proativoAtualizaTabelaVerdade(newOb, tmdc.getAvailableConnection(Connections.CONN_PROATIVO));
 			Load.addLoadCorrectList(newOb);
 		}
 		atualizarProgresso(10);

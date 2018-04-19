@@ -74,7 +74,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 								newOb.setcContabilDebitoFaturada(sapOb.getJnlsCContabilDebito());
 								rowFixed = true;
 							}else {
-								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),2);
+								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),newOb.getDescricaoProduto(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),2);
 								addToRejectList(errorOb,newOb, sapOb, 2);
 							}
 
@@ -85,7 +85,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 								newOb.setcContabilCreditoFaturada(sapOb.getJnlsCContabilCredito());
 								rowFixed = true;
 							}else {
-								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),3);
+								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),newOb.getDescricaoProduto(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),3);
 								addToRejectList(errorOb,newOb, sapOb, 3);
 							}
 						}
@@ -100,7 +100,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 								newOb.setcContabilDebitoAFaturar(sapOb.getJnlsCContabilDebito());
 								rowFixed = true;
 							}else {
-								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),4);
+								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),newOb.getDescricaoProduto(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),4);
 								addToRejectList(errorOb,newOb, sapOb, 4);
 							}
 						}
@@ -110,7 +110,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 								newOb.setcContabilCreditoAFaturar(sapOb.getJnlsCContabilCredito());
 								rowFixed = true;
 							}else {
-								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),5);
+								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),newOb.getDescricaoProduto(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),5);
 								addToRejectList(errorOb,newOb, sapOb, 5);
 							}
 						}
@@ -129,7 +129,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 								newOb.setcContabilAdjDebitoFaturada(sapOb.getJnlsCContabilDebito());
 								rowFixed = true;
 							}else {
-								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),6);
+								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),newOb.getDescricaoProduto(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),6);
 								addToRejectList(errorOb,newOb, sapOb, 6);
 							}
 						}
@@ -139,7 +139,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 								newOb.setcContabilAdjCreditoFaturada(sapOb.getJnlsCContabilCredito());
 								rowFixed = true;
 							}else {
-								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),7);
+								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),newOb.getDescricaoProduto(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),7);
 								addToRejectList(errorOb,newOb, sapOb, 7);
 							}
 						}
@@ -155,7 +155,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 								newOb.setcContabilAdjDebitoAFaturar(sapOb.getJnlsCContabilDebito());
 								rowFixed = true;
 							}else {
-								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),8);
+								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),newOb.getDescricaoProduto(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),8);
 								addToRejectList(errorOb,newOb, sapOb, 8);
 							}
 						}
@@ -166,7 +166,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 								newOb.setcContabilAdjCreditoAFaturar(sapOb.getJnlsCContabilCredito());
 								rowFixed = true;
 							}else {
-								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),9);
+								errorOb = new ErroVo(newOb.getId(),newOb.getIdProdutoKenan(),newOb.getDescricaoProduto(),sapOb.getJnlsCodeId(),sapOb.getJnlsUseCode(),sapOb.getJnlsIdType(),sapOb.getJnlsAccountCategory(),sapOb.getJnlsOpenItemId(),9);
 								addToRejectList(errorOb,newOb, sapOb, 9);
 							}
 						}
@@ -178,7 +178,7 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 		//Itera o objeto da tabela verdade dentro da tabela full da journals para bater as informações
 
 		if (rowFixed) {
-			kenan.kenanAtualizaTabelaVerdade(newOb, tmdc.getAvailableConnection(Connections.CONN_PROATIVO));
+			proativo.proativoAtualizaTabelaVerdade(newOb, tmdc.getAvailableConnection(Connections.CONN_PROATIVO));
 			Load.addLoadCorrectList(newOb);
 		}
 		atualizarProgresso(10);
@@ -189,28 +189,28 @@ public class ThreadBatimento extends ActionAbstract<ProdutoVerdadeVo> {
 
 		switch (codigoErro) {
 		case 2:
-			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil débito faturada "+ob.getcContabilDebitoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
+			erro.setMsgError("Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil débito faturada "+ob.getcContabilDebitoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
 			break;
 		case 3:
-			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil crédito faturada "+ob.getcContabilCreditoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
+			erro.setMsgError("Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil crédito faturada "+ob.getcContabilCreditoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
 			break;
 		case 4:
-			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil débito a faturar "+ob.getcContabilDebitoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
+			erro.setMsgError("Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil débito a faturar "+ob.getcContabilDebitoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
 			break;
 		case 5:
-			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil crédito a faturar "+ob.getcContabilCreditoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
+			erro.setMsgError("Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil crédito a faturar "+ob.getcContabilCreditoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
 			break;
 		case 6:
-			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste débito faturada "+ob.getcContabilAdjDebitoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
+			erro.setMsgError("Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste débito faturada "+ob.getcContabilAdjDebitoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
 			break;
 		case 7:
-			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste crédito faturada "+ob.getcContabilAdjCreditoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
+			erro.setMsgError("Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste crédito faturada "+ob.getcContabilAdjCreditoFaturada()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
 			break;
 		case 8:
-			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste débito a faturar "+ob.getcContabilAdjDebitoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
+			erro.setMsgError("Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste débito a faturar "+ob.getcContabilAdjDebitoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilDebito());
 			break;
 		case 9:
-			erro.setMsgError("Produto: "+ob.getId()+" Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste crédito a faturar "+ob.getcContabilAdjCreditoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
+			erro.setMsgError("Jnl Code ID: "+sapOb.getJnlsCodeId()+" A conta contábil ajuste crédito a faturar "+ob.getcContabilAdjCreditoAFaturar()+" está diferente da Journals " + sapOb.getJnlsCContabilCredito());
 			break;
 		default:
 			break;
