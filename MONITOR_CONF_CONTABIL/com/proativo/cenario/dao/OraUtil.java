@@ -29,7 +29,10 @@ public class OraUtil {
 			Files.createDirectories(Paths.get("/app/gvt/scripts/proativo/cenarios/monitor_conf_contabil/input"));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			Log.info("Não foi possível criar o diretório input.");
+		}catch (Exception e2) {
+			// TODO Auto-generated catch block
+			Log.info("Não foi possível criar o diretório input.");
 		}
 		File f = new File("/app/gvt/scripts/proativo/cenarios/monitor_conf_contabil/input/GARANTIA_CONTABIL_CONF.xls");
 		//File f = new File("D:/GARANTIA_CONTABIL_CONF.xls");

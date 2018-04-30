@@ -23,54 +23,6 @@ import com.proativo.util.log.Log;
 
 public class OraKenan extends OraUtilKenan{
 
-	//Atualiza contas contabeis nulas na config
-	public ProdutoVerdadeVo kenanbuscaCContabil(ProdutoVerdadeVo ob,DynamicConnection dc) {
-		PreparedStatement pst = null;
-		ResultSet rs = null;
-		String sql = null;
-		ProdutoVerdadeVo newOb = ob;
-		try {
-			sql = QueryWarehouse.getQuery("kenanBuscaCContabil");
-			pst = dc.prepareStatement(sql);
-			pst.setInt(1, newOb.getIdProdutoKenan());
-			pst.setInt(2, newOb.getAccountCategory());
-			pst.setInt(3, newOb.getAccountCategory());
-			pst.setInt(4, newOb.getIdProdutoKenan());
-			pst.setInt(5, newOb.getAccountCategory());
-			pst.setInt(6, newOb.getAccountCategory());
-			rs = pst.executeQuery();
-
-			//System.out.println("ID: "+ob.getId()+" ANTES : Alterando CC "+newOb.getIdProdutoKenan() +" " + newOb.getcContabilDebitoFaturada() + " "+ newOb.getcContabilCreditoFaturada()  + " " +newOb.getcContabilDebitoAFaturar()+" "+newOb.getcContabilCreditoAFaturar());
-
-			if(rs.next()){
-				newOb.setJnlsCodeId(rs.getInt("JNL_CODE_ID"));
-				if(newOb.getcContabilDebitoFaturada() == 0 || newOb.getcContabilDebitoFaturada() == -1) {
-					newOb.setcContabilDebitoFaturada(rs.getInt("FML_ACCT_DB_FATURADA"));
-				}
-				if(newOb.getcContabilCreditoFaturada() == 0 || newOb.getcContabilCreditoFaturada() == -1) {
-					newOb.setcContabilCreditoFaturada(rs.getInt("FML_ACCT_CR_FATURADA"));
-				}
-				if(newOb.getcContabilDebitoAFaturar() == 0 || newOb.getcContabilDebitoAFaturar() == -1) {
-					newOb.setcContabilDebitoAFaturar(rs.getInt("FML_ACCT_DB_AFATURAR"));
-				}
-				if(newOb.getcContabilCreditoAFaturar() == 0 || newOb.getcContabilCreditoAFaturar() == -1) {
-					newOb.setcContabilCreditoAFaturar(rs.getInt("FML_ACCT_CR_AFATURAR"));
-				}
-
-				//System.out.println("ID: "+ob.getId()+" DEPOIS : Alterando CC "+newOb.getIdProdutoKenan() +" " + newOb.getcContabilDebitoFaturada() + " "+ newOb.getcContabilCreditoFaturada()  + " " +newOb.getcContabilDebitoAFaturar()+" "+newOb.getcContabilCreditoAFaturar());
-			}
-		} catch (SQLException e) {
-			Log.error("Falha ao buscar conta contábil.", e);
-		} catch (Exception e) {
-			Log.error("Falha ao buscar conta contábil.", e);
-		} finally{
-			close(rs, pst);
-			dc.setUsed(false);
-		}
-		return newOb;
-	}
-
-
 
 	public LoteVo kenanBuscarLotesJnls() {
 		PreparedStatement pst = null;
@@ -264,58 +216,6 @@ public class OraKenan extends OraUtilKenan{
 	}
 
 
-	//Atualiza contas contabeis nulas na config
-	public ProdutoVerdadeVo kenanbuscaCContabilAdj(ProdutoVerdadeVo ob,DynamicConnection dc) {
-		PreparedStatement pst = null;
-		ResultSet rs = null;
-		String sql = null;
-		ProdutoVerdadeVo newOb = ob;
-		try {
-
-			sql = QueryWarehouse.getQuery("kenanBuscaCContabilAdj");
-			pst = dc.prepareStatement(sql);
-			pst.setInt(1, newOb.getIdProdutoKenan());
-			pst.setInt(2, newOb.getAccountCategory());
-			pst.setInt(3, newOb.getAccountCategory());
-			pst.setInt(4, newOb.getIdProdutoKenan());
-			pst.setInt(5, newOb.getAccountCategory());
-			pst.setInt(6, newOb.getAccountCategory());
-			rs = pst.executeQuery();
-			//System.out.println("ID: "+ob.getId()+" ANTES AJUSTE : Alterando CC "+newOb.getIdProdutoKenan() +" " + newOb.getcContabilAdjDebitoFaturada() + " "+ newOb.getcContabilAdjCreditoFaturada()  + " " +newOb.getcContabilAdjDebitoAFaturar()+" "+newOb.getcContabilAdjCreditoAFaturar());
-			if(rs.next()){
-				newOb.setJnlsCodeId(rs.getInt("JNL_CODE_ID"));
-
-				if(newOb.getcContabilAdjDebitoFaturada() == 0 || newOb.getcContabilAdjDebitoFaturada() == -1) {
-					newOb.setcContabilAdjDebitoFaturada(rs.getInt("FML_ACCT_DB_FATURADA"));
-				}
-				if(newOb.getcContabilAdjCreditoFaturada() == 0 || newOb.getcContabilAdjCreditoFaturada() == -1) {
-					newOb.setcContabilAdjCreditoFaturada(rs.getInt("FML_ACCT_CR_FATURADA"));
-				}
-				if(newOb.getcContabilAdjDebitoAFaturar() == 0 || newOb.getcContabilAdjDebitoAFaturar() == -1) {
-					newOb.setcContabilAdjDebitoAFaturar(rs.getInt("FML_ACCT_DB_AFATURAR"));
-				}
-				if(newOb.getcContabilAdjCreditoAFaturar() == 0 || newOb.getcContabilAdjCreditoAFaturar() == -1) {
-					newOb.setcContabilAdjCreditoAFaturar(rs.getInt("FML_ACCT_CR_AFATURAR"));
-				}
-
-				//System.out.println("ID: "+ob.getId()+" DEPOIS AJUSTE : Alterando CC "+newOb.getIdProdutoKenan() +" " + newOb.getcContabilAdjDebitoFaturada() + " "+ newOb.getcContabilAdjCreditoFaturada()  + " " +newOb.getcContabilAdjDebitoAFaturar()+" "+newOb.getcContabilAdjCreditoAFaturar());
-			}
-		} catch (SQLException e) {
-			Log.error("Falha ao buscar conta contábil.", e);
-		} catch (Exception e) {
-			Log.error("Falha ao buscar conta contábil.", e);
-		} finally{
-			close(rs, pst);
-			dc.setUsed(false);
-		}
-		return newOb;
-	}
-
-
-
-
-
-
 	public List<ProdutoSAPVo> kenanBuscaConfiguracoesJnls() {
 		ProdutoSAPVo ob ;
 		List<ProdutoSAPVo> lob = new ArrayList<ProdutoSAPVo>();
@@ -331,6 +231,7 @@ public class OraKenan extends OraUtilKenan{
 			while(rs.next()) {
 				ob = new ProdutoSAPVo();
 				ob.setJnlsCodeId(rs.getInt("JNL_CODE_ID"));
+				ob.setSapDescription(rs.getString("DESCRIPTION_TEXT"));
 				ob.setJnlsAccountCategory(rs.getInt("ACCOUNT_CATEGORY"));
 				ob.setJnlsIdType(rs.getInt("ID_TYPE"));
 				ob.setJnlsIdType2(rs.getInt("ID_TYPE2"));

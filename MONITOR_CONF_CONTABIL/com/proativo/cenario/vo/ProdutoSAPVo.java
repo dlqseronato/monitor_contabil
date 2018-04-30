@@ -17,11 +17,18 @@ public class ProdutoSAPVo{
 	private int jnlsTaxTypeCode;
 	private int jnlsCContabilDebito;
 	private int jnlsCContabilCredito;
+	private String sapDescription;
 	private Date jnlsActiveDate;
 	private Date jnlsInactiveDate;
 	
 	
 
+	public String getSapDescription() {
+		return sapDescription;
+	}
+	public void setSapDescription(String sapDescription) {
+		this.sapDescription = sapDescription;
+	}
 	public int getJnlsCodeId() {
 		return jnlsCodeId;
 	}

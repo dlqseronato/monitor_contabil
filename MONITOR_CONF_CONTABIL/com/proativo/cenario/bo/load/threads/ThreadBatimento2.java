@@ -263,7 +263,7 @@ public class ThreadBatimento2 extends ActionAbstract<ContDetVo> {
 
 		}
 		} catch (NullPointerException e) {
-			System.out.println("Produto: "+ob.getElement()+" do tipo "+ob.getTecnologia()+" Erro: Possui algum objeto nulo. Divisão "+ob.getDivisao() +" Ordem interna "+ob.getOrdemInterna() +" Centro de custo "+ob.getCentroCusto() );
+			System.out.println("Tipo "+ob.getTecnologia()+"   Erro: Possui algum objeto nulo. Divisão "+ob.getDivisao() +" Ordem interna "+ob.getOrdemInterna() +" Centro de custo "+ob.getCentroCusto() );
 		}
 
 
@@ -273,22 +273,22 @@ public class ThreadBatimento2 extends ActionAbstract<ContDetVo> {
 	public void addToRejectList(ErroVo erro,ContDetVo ob,int codigoErro,String divisaoCorreta,String ordemInternaCorreta, String centroCustoCorreto) {
 		switch (codigoErro) {
 		case 10:
-			erro.setMsgError("Produto: "+ob.getElement()+" do tipo "+ob.getTecnologia()+" Erro: Divisão "+ob.getDivisao() +" está incorreta. A correta é "+divisaoCorreta);
+			erro.setMsgError(ob.getTecnologia()+"   Erro: Divisão "+ob.getDivisao() +" está incorreta. A correta é "+divisaoCorreta);
 			break;
 		case 11:
-			erro.setMsgError("Produto: "+ob.getElement()+" Tipo: "+ob.getTecnologia()+" Erro: Ordem interna "+ob.getOrdemInterna() +" está incorreta. A correta é "+ordemInternaCorreta);
+			erro.setMsgError(ob.getTecnologia()+"   Erro: Ordem interna "+ob.getOrdemInterna() +" está incorreta. A correta é "+ordemInternaCorreta);
 			break;
 		case 12:
-			erro.setMsgError("Produto: "+ob.getElement()+" Tipo: "+ob.getTecnologia()+" Erro: Centro de custo "+ob.getCentroCusto() +" está incorreto. O correto é "+centroCustoCorreto);
+			erro.setMsgError(ob.getTecnologia()+"   Erro: Centro de custo "+ob.getCentroCusto() +" está incorreto. O correto é "+centroCustoCorreto);
 			break;
 		case 13:
-			erro.setMsgError("Produto: "+ob.getElement()+" Tipo: "+ob.getTecnologia()+" Erro: Centro de custo nulo na ContDet.");
+			erro.setMsgError(ob.getTecnologia()+"   Erro: Centro de custo nulo na ContDet.");
 			break;
 		case 14:
-			erro.setMsgError("Produto: "+ob.getElement()+" Tipo: "+ob.getTecnologia()+" Erro: Ordem interna nulo na ContDet.");
+			erro.setMsgError(ob.getTecnologia()+"   Erro: Ordem interna nulo na ContDet.");
 			break;
 		case 15:
-			erro.setMsgError("Produto: "+ob.getElement()+" Tipo: "+ob.getTecnologia()+" Erro: Divisao nula na ContDet.");
+			erro.setMsgError(ob.getTecnologia()+"   Erro: Divisao nula na ContDet.");
 			break;
 		default:
 			break;
