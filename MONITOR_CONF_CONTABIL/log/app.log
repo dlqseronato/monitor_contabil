@@ -853,3 +853,51 @@ javax.mail.SendFailedException: Sending failed;
 [2018-04-30 16:55:03,691] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Validation
 [2018-04-30 16:55:03,692] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Report
 [2018-04-30 16:55:03,713] INFO : Finalizando cenario MONITOR_CONF_CONTABIL - Execucao 83680 - Tempo de execucao: 00:33:40
+[2018-04-30 17:18:47,611] INFO : IT Suporte Ciclo da Receita
+[2018-04-30 17:18:47,613] INFO : monitor_conf_contabil Versao 2.1.0
+[2018-04-30 17:18:47,647] INFO : Iniciando Cenario MONITOR_CONF_CONTABIL - Execucao 83681
+[2018-04-30 17:18:47,733] INFO : Iniciando processo Load para todos os vencimentos
+[2018-04-30 17:18:47,745] INFO : Kenan - Buscando configurações atuais da Journals.
+[2018-04-30 17:19:23,544] INFO : IT Suporte Ciclo da Receita
+[2018-04-30 17:19:23,546] INFO : monitor_conf_contabil Versao 2.1.0
+[2018-04-30 17:19:23,586] INFO : Iniciando Cenario MONITOR_CONF_CONTABIL - Execucao 83682
+[2018-04-30 17:19:23,667] INFO : Iniciando processo Load para todos os vencimentos
+[2018-04-30 17:19:23,678] INFO : Kenan - Buscando configurações atuais da Journals.
+[2018-04-30 17:19:23,679] INFO : Kenan - Buscando ultimo lote processado da Journals.
+[2018-04-30 17:19:23,679] INFO : Kenan - Buscando divisões pré configuradas no Kenan.
+[2018-04-30 17:19:23,679] INFO : Kenan - Buscando ordens internas pré configuradas no Kenan.
+[2018-04-30 17:19:23,679] INFO : Kenan - Buscando centro de custos pré configuradas no Kenan.
+[2018-04-30 17:19:23,689] INFO : Util - Buscar dados planilha MONITOR_CONTABIL_CONF.
+[2018-04-30 17:19:25,825] INFO : Util - Arquivo de configuração MONITOR_CONTABIL_CONF não existe no caminho. Erro: null
+[2018-04-30 17:19:25,825] INFO : Proativo - Buscando tabela verdade na tabela MONITOR_CONTABIL_CONF.
+[2018-04-30 17:19:34,127] INFO : Kenan - Executando batimento de informações:
+[2018-04-30 17:19:38,279] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento em 50 thread(s) para 38.510 item(ns)
+[2018-04-30 17:23:03,508] INFO : IT Suporte Ciclo da Receita
+[2018-04-30 17:23:03,509] INFO : monitor_conf_contabil Versao 2.1.0
+[2018-04-30 17:23:03,549] INFO : Iniciando Cenario MONITOR_CONF_CONTABIL - Execucao 83683
+[2018-04-30 17:23:03,647] INFO : Iniciando processo Load para todos os vencimentos
+[2018-04-30 17:23:03,657] INFO : Kenan - Buscando configurações atuais da Journals.
+[2018-04-30 17:23:03,657] INFO : Kenan - Buscando ultimo lote processado da Journals.
+[2018-04-30 17:23:03,657] INFO : Kenan - Buscando divisões pré configuradas no Kenan.
+[2018-04-30 17:23:03,657] INFO : Kenan - Buscando ordens internas pré configuradas no Kenan.
+[2018-04-30 17:23:03,657] INFO : Kenan - Buscando centro de custos pré configuradas no Kenan.
+[2018-04-30 17:23:03,657] INFO : Util - Buscar dados planilha MONITOR_CONTABIL_CONF.
+[2018-04-30 17:23:12,446] INFO : Iniciando a leitura da planilha XLS:
+[2018-04-30 17:23:12,548] INFO : Colunas encontradas na planilha: 83
+[2018-04-30 17:23:12,548] INFO : Linhas encontradas na planilha: 38510
+[2018-04-30 17:23:13,439] INFO : Proativo - Limpando tabela verdade atual.
+[2018-04-30 17:23:14,196] INFO : Proativo - Inserindo novas configurações na tabela MONITOR_CONTABIL_CONF
+[2018-04-30 17:23:17,797] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadLoadTabelaVerdade em 50 thread(s) para 38.510 item(ns)
+[2018-04-30 17:23:20,807] INFO : Processados 3.851 objetos de 38.510 - 10%
+[2018-04-30 17:23:23,426] INFO : Processados 7.702 objetos de 38.510 - 20%
+[2018-04-30 17:23:25,920] INFO : Processados 11.553 objetos de 38.510 - 30%
+[2018-04-30 17:23:28,289] INFO : Processados 15.404 objetos de 38.510 - 40%
+[2018-04-30 17:23:31,001] INFO : Processados 19.255 objetos de 38.510 - 50%
+[2018-04-30 17:23:33,592] INFO : Processados 23.106 objetos de 38.510 - 60%
+[2018-04-30 17:23:36,090] INFO : Processados 26.957 objetos de 38.510 - 70%
+[2018-04-30 17:23:38,770] INFO : Processados 30.808 objetos de 38.510 - 80%
+[2018-04-30 17:23:41,253] INFO : Processados 34.659 objetos de 38.510 - 90%
+[2018-04-30 17:23:44,234] INFO : Processados 38.510 objetos de 38.510 - 100%
+[2018-04-30 17:23:44,235] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadLoadTabelaVerdade. Executadas 50 threads
+[2018-04-30 17:23:44,460] INFO : Kenan - Executando batimento de informações:
+[2018-04-30 17:23:47,694] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento em 50 thread(s) para 38.510 item(ns)
