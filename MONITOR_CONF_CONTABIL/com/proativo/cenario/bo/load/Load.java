@@ -123,10 +123,10 @@ public class Load extends Processo {
 
 			Log.info("Kenan - Buscando lançamentos referente ao último lote "+lote.getLote()+" na GVT_KENAN_SAP_SPED_CONT_DET.");
 			for (int i = 1; i <= qtdPaginas; i++) {
-				contDetList = new ArrayList<>();
-				//contDetList = kenan.kenanBuscarContDet(lote.getLote(),i);
+				//contDetList = new ArrayList<>();
+				contDetList = kenan.kenanBuscarContDet(lote.getLote(),i);
 				//contDetList.add(new ContDetVo(id, empresaMktCode, dataDocumento, tipoLancamento, idType2, contaContabilDb, contaConbabilCr, accountNo, externalId, accountCategory, openItemId, codAtribuicao, divisao, centroCusto, element, ordemInterna, tecnologia));				
-				contDetList.add(new ContDetVo(1, 31, new Date(System.currentTimeMillis()), 1, 1, 21152911, 11211151, 0, null, 10, 18, "M02", "39RN", "39TR070100", 928, "T39GFNFA", "VOZ COBRE - Doações"));
+				//contDetList.add(new ContDetVo(1, 31, new Date(System.currentTimeMillis()), 1, 1, 21152911, 11211151, 0, null, 10, 18, "M02", "39RN", "39TR070100", 928, "T39GFNFA", "VOZ COBRE - Doações"));
 				Log.info("Kenan - Encontrada pagina "+i+" de "+qtdPaginas+" com "+contDetList.size()+" registros do lote "+lote.getLote());
 				try {
 					tmdc.executar(contDetList, new ThreadBatimento2( cenario,tmdc,contDetList.size(),divisoes,ordensInternas), cenario.getQuantidadeThreads(), Connections.CONN_KENAN_CT+1, Connections.CONN_KENAN_CT+2 ,Connections.CONN_PROATIVO);
@@ -164,7 +164,7 @@ public class Load extends Processo {
 
 		}else{
 			Log.info("Proativo - Buscando tabela verdade na tabela MONITOR_CONTABIL_CONF.");
-			//listaVerdade = proativo.proativoBuscarTabelaVerdade();
+			listaVerdade = proativo.proativoBuscarTabelaVerdade();
 		}
 
 		Log.info("Kenan - Executando batimento de informações:");

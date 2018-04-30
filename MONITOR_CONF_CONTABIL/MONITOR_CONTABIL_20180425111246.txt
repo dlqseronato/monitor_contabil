@@ -1,0 +1,396 @@
+RELATÓRIO DE CONFIGURAÇÕES CONTÁBEIS Data da execução:  20180425111246
+Id Execução: 83526 
+Quantidade verificada: 0
+Quantidade Ok: -361
+Quantidade de erros: 361
+
+ERRO: ID_VALUE NÃO ENCONTRADO NA JOURNALS
+
+ERRO: RC - CONTA CONTABIL FATURADA DÉBITO INCORRETA
+
+ERRO: RC - CONTA CONTABIL FATURADA CRÉDITO INCORRETA
+
+ERRO: RC - CONTA CONTABIL A FATURAR DÉBITO INCORRETA
+
+ERRO: RC - CONTA CONTABIL A FATURAR CRÉDITO INCORRETA
+
+ERRO: ADJ - CONTA CONTABIL FATURADA DÉBITO INCORRETA
+
+ERRO: ADJ - CONTA CONTABIL FATURADA CRÉDITO INCORRETA
+
+ERRO: ADJ - CONTA CONTABIL A FATURAR DÉBITO INCORRETA
+
+ERRO: ADJ - CONTA CONTABIL A FATURAR CRÉDITO INCORRETA
+
+ERRO: DIVISAO ESTÁ INCORRETA.
+Product : 10844 Error Type:  10 Description:  Produto: 10844 do tipo TV DTH - Locação Ponto Adicional Erro: Divisão 30PR está incorreta. A correta é 40DF
+Product : 10753 Error Type:  10 Description:  Produto: 10753 do tipo TV DTH - Ultra HD Erro: Divisão 30PR está incorreta. A correta é 40DF
+Product : 10755 Error Type:  10 Description:  Produto: 10755 do tipo TV DTH - Ultimate HD Erro: Divisão 30PR está incorreta. A correta é 40DF
+Product : 10650 Error Type:  10 Description:  Produto: 10650 do tipo TV DTH - Pacote Ultimate HD - DTH Erro: Divisão 30PR está incorreta. A correta é 40DF
+Product : 10073 Error Type:  10 Description:  Produto: 10073 do tipo TV DTH - PFC Série A + 1 Regional Erro: Divisão 30PR está incorreta. A correta é 40DF
+Product : 10751 Error Type:  10 Description:  Produto: 10751 do tipo TV DTH - Super HD Erro: Divisão 30PR está incorreta. A correta é 40DF
+Product : 10760 Error Type:  10 Description:  Produto: 10760 do tipo TV DTH - Standard HD Erro: Divisão 30PR está incorreta. A correta é 85MN
+Product : 10844 Error Type:  10 Description:  Produto: 10844 do tipo TV DTH - Locação Ponto Adicional Erro: Divisão 30PR está incorreta. A correta é 85MN
+Product : 10751 Error Type:  10 Description:  Produto: 10751 do tipo TV DTH - Super HD Erro: Divisão 30PR está incorreta. A correta é 85MN
+Product : 10050 Error Type:  10 Description:  Produto: 10050 do tipo TV HIBRIDO - Pacote Super Erro: Divisão 30PR está incorreta. A correta é 85MN
+Product : 10051 Error Type:  10 Description:  Produto: 10051 do tipo TV HIBRIDO - Pacote Ultra Erro: Divisão 30PR está incorreta. A correta é 18ES
+
+ERRO: ORDEM INTERNA ESTÁ INCORRETA.
+Product : 10844 Error Type:  11 Description:  Produto: 10844 Tipo: TV DTH - Locação Ponto Adicional Erro: Ordem interna T30T40DF está incorreta. A correta é T40T30T
+Product : 10753 Error Type:  11 Description:  Produto: 10753 Tipo: TV DTH - Ultra HD Erro: Ordem interna T30T40DF está incorreta. A correta é T40T30T
+Product : 10755 Error Type:  11 Description:  Produto: 10755 Tipo: TV DTH - Ultimate HD Erro: Ordem interna T30T40DF está incorreta. A correta é T40T30T
+Product : 10650 Error Type:  11 Description:  Produto: 10650 Tipo: TV DTH - Pacote Ultimate HD - DTH Erro: Ordem interna T30T40DF está incorreta. A correta é T40T30T
+Product : 10073 Error Type:  11 Description:  Produto: 10073 Tipo: TV DTH - PFC Série A + 1 Regional Erro: Ordem interna T30T40DF está incorreta. A correta é T40T30T
+Product : 10751 Error Type:  11 Description:  Produto: 10751 Tipo: TV DTH - Super HD Erro: Ordem interna T30T40DF está incorreta. A correta é T40T30T
+Product : 70699 Error Type:  11 Description:  Produto: 70699 Tipo:  - Vivo Guru (Remoto) Erro: Ordem interna D2929SP13RS está incorreta. A correta é D2913RS
+Product : 70699 Error Type:  11 Description:  Produto: 70699 Tipo:  - Vivo Guru (Remoto) Erro: Ordem interna D2929SP13RS está incorreta. A correta é D2913RS
+Product : 70699 Error Type:  11 Description:  Produto: 70699 Tipo:  - Vivo Guru (Remoto) Erro: Ordem interna D2929SP13RS está incorreta. A correta é D2913RS
+Product : 70699 Error Type:  11 Description:  Produto: 70699 Tipo:  - Vivo Guru (Remoto) Erro: Ordem interna D2929SP13RS está incorreta. A correta é D2913RS
+Product : 10760 Error Type:  11 Description:  Produto: 10760 Tipo: TV DTH - Standard HD Erro: Ordem interna T30T85MN está incorreta. A correta é T85T30T
+Product : 10844 Error Type:  11 Description:  Produto: 10844 Tipo: TV DTH - Locação Ponto Adicional Erro: Ordem interna T30T85MN está incorreta. A correta é T85T30T
+Product : 10751 Error Type:  11 Description:  Produto: 10751 Tipo: TV DTH - Super HD Erro: Ordem interna T30T85MN está incorreta. A correta é T85T30T
+Product : 10050 Error Type:  11 Description:  Produto: 10050 Tipo: TV HIBRIDO - Pacote Super Erro: Ordem interna T30T85MN está incorreta. A correta é T85T30T
+Product : 10051 Error Type:  11 Description:  Produto: 10051 Tipo: TV HIBRIDO - Pacote Ultra Erro: Ordem interna T30T18ES está incorreta. A correta é T18T30T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo:  - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70069 Error Type:  11 Description:  Produto: 70069 Tipo: TV IPTV - Locação Ponto Adicional Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70069 Error Type:  11 Description:  Produto: 70069 Tipo: TV IPTV - Locação Ponto Adicional Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70069 Error Type:  11 Description:  Produto: 70069 Tipo: TV IPTV - Locação Ponto Adicional Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70069 Error Type:  11 Description:  Produto: 70069 Tipo: TV IPTV - Locação Ponto Adicional Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10768 Error Type:  11 Description:  Produto: 10768 Tipo: TV IPTV - Full HD Futebol Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70045 Error Type:  11 Description:  Produto: 70045 Tipo: TV IPTV - Telecine Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10768 Error Type:  11 Description:  Produto: 10768 Tipo:  - Full HD Futebol Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10768 Error Type:  11 Description:  Produto: 10768 Tipo: TV IPTV - Full HD Futebol Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70014 Error Type:  11 Description:  Produto: 70014 Tipo: TV IPTV - Combate Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70069 Error Type:  11 Description:  Produto: 70069 Tipo: TV IPTV - Locação Ponto Adicional Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10766 Error Type:  11 Description:  Produto: 10766 Tipo: TV IPTV - Ultimate HD Futebol Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10761 Error Type:  11 Description:  Produto: 10761 Tipo: TV IPTV - Super HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 12844 Error Type:  11 Description:  Produto: 12844 Tipo: TV IPTV - Big Brother Brasil - Março Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10768 Error Type:  11 Description:  Produto: 10768 Tipo: TV IPTV - Full HD Futebol Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10763 Error Type:  11 Description:  Produto: 10763 Tipo: TV IPTV - Ultra HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10761 Error Type:  11 Description:  Produto: 10761 Tipo: TV IPTV - Super HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10765 Error Type:  11 Description:  Produto: 10765 Tipo: TV IPTV - Ultimate HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10763 Error Type:  11 Description:  Produto: 10763 Tipo: TV IPTV - Ultra HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10767 Error Type:  11 Description:  Produto: 10767 Tipo: TV IPTV - Full HD Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 70070 Error Type:  11 Description:  Produto: 70070 Tipo: TV IPTV - Locação Ponto Adicional Promo Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 705 Error Type:  11 Description:  Produto: 705 Tipo: TV IPTV -  Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+Product : 10768 Error Type:  11 Description:  Produto: 10768 Tipo: TV IPTV - Full HD Futebol Fibra Erro: Ordem interna T36T36PI está incorreta. A correta é T36T29T
+
+ERRO: CENTRO DE CUSTO ESTÁ INCORRETO.
+Product : 10844 Error Type:  12 Description:  Produto: 10844 Tipo: TV DTH - Locação Ponto Adicional Erro: Centro de custo 30TR070100 está incorreto. O correto é 40TR070100
+Product : 10753 Error Type:  12 Description:  Produto: 10753 Tipo: TV DTH - Ultra HD Erro: Centro de custo 30TR070100 está incorreto. O correto é 40TR070100
+Product : 10755 Error Type:  12 Description:  Produto: 10755 Tipo: TV DTH - Ultimate HD Erro: Centro de custo 30TR070100 está incorreto. O correto é 40TR070100
+Product : 10650 Error Type:  12 Description:  Produto: 10650 Tipo: TV DTH - Pacote Ultimate HD - DTH Erro: Centro de custo 30TR070100 está incorreto. O correto é 40TR070100
+Product : 10073 Error Type:  12 Description:  Produto: 10073 Tipo: TV DTH - PFC Série A + 1 Regional Erro: Centro de custo 30TR070100 está incorreto. O correto é 40TR070100
+Product : 10751 Error Type:  12 Description:  Produto: 10751 Tipo: TV DTH - Super HD Erro: Centro de custo 30TR070100 está incorreto. O correto é 40TR070100
+Product : 10760 Error Type:  12 Description:  Produto: 10760 Tipo: TV DTH - Standard HD Erro: Centro de custo 30TR070100 está incorreto. O correto é 85TR070100
+Product : 10844 Error Type:  12 Description:  Produto: 10844 Tipo: TV DTH - Locação Ponto Adicional Erro: Centro de custo 30TR070100 está incorreto. O correto é 85TR070100
+Product : 10751 Error Type:  12 Description:  Produto: 10751 Tipo: TV DTH - Super HD Erro: Centro de custo 30TR070100 está incorreto. O correto é 85TR070100
+Product : 10050 Error Type:  12 Description:  Produto: 10050 Tipo: TV HIBRIDO - Pacote Super Erro: Centro de custo 30TR070100 está incorreto. O correto é 85TR070100
+Product : 10051 Error Type:  12 Description:  Produto: 10051 Tipo: TV HIBRIDO - Pacote Ultra Erro: Centro de custo 30TR070100 está incorreto. O correto é 18TR070100
+
+ERRO: CENTRO DE CUSTO NULO NA CONTDET.
+Product : 21 Error Type:  13 Description:  Produto: 21 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 93 Error Type:  13 Description:  Produto: 93 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 93 Error Type:  13 Description:  Produto: 93 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 93 Error Type:  13 Description:  Produto: 93 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 93 Error Type:  13 Description:  Produto: 93 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 21 Error Type:  13 Description:  Produto: 21 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 21 Error Type:  13 Description:  Produto: 21 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 93 Error Type:  13 Description:  Produto: 93 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 21 Error Type:  13 Description:  Produto: 21 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 93 Error Type:  13 Description:  Produto: 93 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 93 Error Type:  13 Description:  Produto: 93 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 21 Error Type:  13 Description:  Produto: 21 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 93 Error Type:  13 Description:  Produto: 93 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 20 Error Type:  13 Description:  Produto: 20 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 93 Error Type:  13 Description:  Produto: 93 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+Product : 93 Error Type:  13 Description:  Produto: 93 Tipo:  -  Erro: Centro de custo nulo na ContDet.
+
+ERRO: ORDEM INTERNA NULA NA CONTDET.
+Product : 21 Error Type:  14 Description:  Produto: 21 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 93 Error Type:  14 Description:  Produto: 93 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 93 Error Type:  14 Description:  Produto: 93 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 93 Error Type:  14 Description:  Produto: 93 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 93 Error Type:  14 Description:  Produto: 93 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 21 Error Type:  14 Description:  Produto: 21 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 21 Error Type:  14 Description:  Produto: 21 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 93 Error Type:  14 Description:  Produto: 93 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 21 Error Type:  14 Description:  Produto: 21 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 93 Error Type:  14 Description:  Produto: 93 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 93 Error Type:  14 Description:  Produto: 93 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 21 Error Type:  14 Description:  Produto: 21 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 93 Error Type:  14 Description:  Produto: 93 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 20 Error Type:  14 Description:  Produto: 20 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 93 Error Type:  14 Description:  Produto: 93 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 93 Error Type:  14 Description:  Produto: 93 Tipo:  -  Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12798 Error Type:  14 Description:  Produto: 12798 Tipo: TV DTH - Ressarcimento por interrupção do serviço de TV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+Product : 12812 Error Type:  14 Description:  Produto: 12812 Tipo: TV IPTV - Isenção de Cob. por Interrupção Pontual do Serviço IPTV Erro: Ordem interna nulo na ContDet.
+
+ERRO: DIVISAO NULA NA CONTDET.

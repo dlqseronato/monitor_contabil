@@ -40,12 +40,12 @@ public class Email {
 					"<br><br>";
 				
 						
-			String subject = "Monitor de Configuracoes Contabeis";
+
 			
 			destinatarios = cenario.getEmailPara().toArray(new String[cenario.getEmailPara().size()]);
-			
-
 			mailServer = proativo.buscarParametro("emailServidor"); 
+			String subject = "Monitor de Configuracoes Contabeis "+mailServer;
+			
 			for (String destinatario: destinatarios) {
 				System.out.println(mailServer+"\n"+destinatario+"\n"+subject);	
 			}
