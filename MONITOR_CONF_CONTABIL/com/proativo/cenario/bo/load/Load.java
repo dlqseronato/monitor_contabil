@@ -1,7 +1,6 @@
 package com.proativo.cenario.bo.load;
 
 import java.io.FileNotFoundException;
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -133,7 +132,7 @@ public class Load extends Processo {
 				Log.info("Nº total de rejeitados: "+listaRejeitados.size());		
 			}
 		} catch (NullPointerException e) {
-			Log.info("WARNING: Não há lotes da Journals do mês atual para validar.");
+			Log.info("WARNING Kenan - Não há lotes da Journals do mês atual para validar.");
 		}		
 		Log.info("Util - Buscar dados planilha MONITOR_CONTABIL_CONF.");
 		Planilha p;
@@ -149,9 +148,12 @@ public class Load extends Processo {
 				listaVerdade.add(ob);
 			}
 		} catch (FileNotFoundException e) {
-			Log.info("Util - Arquivo de configuração MONITOR_CONTABIL_CONF não existe no caminho."+ " Erro: " + e.getCause());
+			Log.info("WARNING Util - Arquivo de configuração MONITOR_CONTABIL_CONF não existe no caminho."+ " Erro: " + e.getCause());
 			ArquivoExiste = false;
+		} catch (Exception e) {
+			Log.info("WARNING Util - Erro genérico no processamento do arquivo de configuração MONITOR_CONTABIL_CONF.");
 		}
+		
 		if(ArquivoExiste) {
 			Log.info("Proativo - Limpando tabela verdade atual.");
 			proativo.proativoLimparTabelaVerdade();
@@ -182,7 +184,7 @@ public class Load extends Processo {
 		try {
 			proativo.proativoInsereControleExecucao(cenario.getIdExecucao(), listaRejeitados.size(), lote.getLote());
 		}catch (NullPointerException e) {
-			Log.info("WARNING - Não há lotes na Journals para inserir na Controle.");
+			Log.info("WARNING Proativo - Não há lotes na Journals para inserir na Controle.");
 			proativo.proativoInsereControleExecucao(cenario.getIdExecucao(), listaRejeitados.size(), "LOTE INVALIDO");
 		}
 		

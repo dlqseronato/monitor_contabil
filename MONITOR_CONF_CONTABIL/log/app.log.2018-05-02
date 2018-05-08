@@ -1,0 +1,69 @@
+[2018-05-02 11:40:38,857] INFO : IT Suporte Ciclo da Receita
+[2018-05-02 11:40:38,862] INFO : monitor_conf_contabil Versao 2.1.0
+[2018-05-02 11:40:38,904] INFO : Iniciando Cenario MONITOR_CONF_CONTABIL - Execucao 83719
+[2018-05-02 11:40:38,992] INFO : Iniciando processo Load para todos os vencimentos
+[2018-05-02 11:40:39,007] INFO : Kenan - Buscando configurações atuais da Journals.
+[2018-05-02 11:40:54,763] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130184 Id Value: 1 Erro: null
+[2018-05-02 11:40:54,764] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130185 Id Value: 1 Erro: null
+[2018-05-02 11:40:54,764] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130186 Id Value: 1 Erro: null
+[2018-05-02 11:40:54,770] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130187 Id Value: 1 Erro: null
+[2018-05-02 11:40:54,771] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130188 Id Value: 1 Erro: null
+[2018-05-02 11:40:54,771] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130189 Id Value: 1 Erro: null
+[2018-05-02 11:40:54,771] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130190 Id Value: 1 Erro: null
+[2018-05-02 11:40:54,771] INFO : Falha ao converter conta contábil em inteiro. Jnl Code Id: 1130191 Id Value: 1 Erro: null
+[2018-05-02 11:41:17,196] INFO : Kenan - Buscando ultimo lote processado da Journals.
+[2018-05-02 11:41:17,209] INFO : Kenan - Buscando divisões pré configuradas no Kenan.
+[2018-05-02 11:41:17,220] INFO : Kenan - Buscando ordens internas pré configuradas no Kenan.
+[2018-05-02 11:41:17,455] INFO : Kenan - Buscando centro de custos pré configuradas no Kenan.
+[2018-05-02 11:41:17,465] INFO : Kenan - Buscando quantidade de paginas da query da cont det.
+[2018-05-02 11:41:17,467] INFO : WARNING: Não há lotes da Journals do mês atual para validar.
+[2018-05-02 11:41:17,467] INFO : Util - Buscar dados planilha MONITOR_CONTABIL_CONF.
+[2018-05-02 11:41:19,455] INFO : Util - Arquivo de configuração MONITOR_CONTABIL_CONF não existe no caminho. Erro: null
+[2018-05-02 11:41:19,455] INFO : Proativo - Buscando tabela verdade na tabela MONITOR_CONTABIL_CONF.
+[2018-05-02 11:41:31,315] INFO : Kenan - Executando batimento de informações:
+[2018-05-02 11:41:35,308] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadBatimento em 50 thread(s) para 38.510 item(ns)
+[2018-05-02 11:41:55,450] INFO : Processados 3.851 objetos de 38.510 - 10%
+[2018-05-02 11:42:14,922] INFO : Processados 7.702 objetos de 38.510 - 20%
+[2018-05-02 11:42:34,617] INFO : Processados 11.553 objetos de 38.510 - 30%
+[2018-05-02 11:42:54,079] INFO : Processados 15.404 objetos de 38.510 - 40%
+[2018-05-02 11:43:13,334] INFO : Processados 19.255 objetos de 38.510 - 50%
+[2018-05-02 11:43:32,739] INFO : Processados 23.106 objetos de 38.510 - 60%
+[2018-05-02 11:43:52,275] INFO : Processados 26.957 objetos de 38.510 - 70%
+[2018-05-02 11:44:12,548] INFO : Processados 30.808 objetos de 38.510 - 80%
+[2018-05-02 11:44:33,413] INFO : Processados 34.659 objetos de 38.510 - 90%
+[2018-05-02 11:44:57,535] INFO : Processados 38.510 objetos de 38.510 - 100%
+[2018-05-02 11:44:57,535] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadBatimento. Executadas 50 threads
+[2018-05-02 11:44:58,034] INFO : Kenan - Inserindo lista de rejeitados.
+[2018-05-02 11:45:02,086] INFO : Paralelisando com.proativo.cenario.bo.load.threads.ThreadLoadRejeitados em 50 thread(s) para 1.706 item(ns)
+[2018-05-02 11:45:02,468] INFO : Processados 171 objetos de 1.706 - 10%
+[2018-05-02 11:45:02,668] INFO : Processados 342 objetos de 1.706 - 20%
+[2018-05-02 11:45:02,882] INFO : Processados 512 objetos de 1.706 - 30%
+[2018-05-02 11:45:03,135] INFO : Processados 683 objetos de 1.706 - 40%
+[2018-05-02 11:45:03,312] INFO : Processados 853 objetos de 1.706 - 50%
+[2018-05-02 11:45:03,483] INFO : Processados 1.024 objetos de 1.706 - 60%
+[2018-05-02 11:45:03,629] INFO : Processados 1.195 objetos de 1.706 - 70%
+[2018-05-02 11:45:03,792] INFO : Processados 1.365 objetos de 1.706 - 80%
+[2018-05-02 11:45:03,993] INFO : Processados 1.536 objetos de 1.706 - 90%
+[2018-05-02 11:45:04,501] INFO : Processados 1.706 objetos de 1.706 - 100%
+[2018-05-02 11:45:04,504] INFO : Fim paralelismo com.proativo.cenario.bo.load.threads.ThreadLoadRejeitados. Executadas 50 threads
+[2018-05-02 11:45:05,124] INFO : Quantidade de objetos carregados: 38510
+[2018-05-02 11:45:05,124] INFO : Quantidade de contas contábeis zeradas corrigidas: 25292
+[2018-05-02 11:45:05,125] INFO : Quantidade de erros detectados: 1706
+[2018-05-02 11:45:05,125] INFO : Enviando e-mail de report.
+[2018-05-02 11:45:10,779] ERROR : Falha ao enviar e-mail de relatório
+javax.mail.SendFailedException: Sending failed;
+  nested exception is:
+	class javax.mail.MessagingException: 530 5.7.1 Client was not authenticated
+
+	at javax.mail.Transport.send0(Transport.java:218)
+	at javax.mail.Transport.send(Transport.java:80)
+	at com.proativo.util.Mailer.sendWithAttachments(Mailer.java:431)
+	at com.proativo.cenario.util.Email.enviaEmail(Email.java:52)
+	at com.proativo.cenario.bo.load.Load.executar(Load.java:180)
+	at com.proativo.util.app.ProativoAppUtil.executaAplicacao(ProativoAppUtil.java:100)
+	at com.proativo.cenario.app.CenarioApp.main(CenarioApp.java:13)
+[2018-05-02 11:45:15,818] INFO : WARNING - Não há lotes na Journals para inserir na Controle.
+[2018-05-02 11:45:15,833] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Action
+[2018-05-02 11:45:15,834] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Validation
+[2018-05-02 11:45:15,834] INFO : Cenario MONITOR_CONF_CONTABIL nao possui subprocesso Report
+[2018-05-02 11:45:15,845] INFO : Finalizando cenario MONITOR_CONF_CONTABIL - Execucao 83719 - Tempo de execucao: 00:04:40

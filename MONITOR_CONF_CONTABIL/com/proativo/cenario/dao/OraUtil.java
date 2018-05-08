@@ -8,10 +8,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.filechooser.FileNameExtensionFilter;
-
 import com.proativo.util.log.Log;
 
 import jxl.Sheet;
@@ -24,7 +20,6 @@ import teste.Planilha;
 public class OraUtil {
 	public Planilha buscardadosPlanilha() throws FileNotFoundException{
 		// TODO Auto-generated method stub
-		JFileChooser fc; 
 		try {
 			Files.createDirectories(Paths.get("/app/gvt/scripts/proativo/cenarios/monitor_conf_contabil/input"));
 		} catch (IOException e1) {
@@ -35,15 +30,6 @@ public class OraUtil {
 			Log.info("Não foi possível criar o diretório input.");
 		}
 		File f = new File("/app/gvt/scripts/proativo/cenarios/monitor_conf_contabil/input/GARANTIA_CONTABIL_CONF.xls");
-		//File f = new File("D:/GARANTIA_CONTABIL_CONF.xls");
-		JButton open = new JButton();
-		fc = new JFileChooser();
-		fc.setCurrentDirectory(new java.io.File("/app/gvt/scripts/proativo/cenarios/monitor_conf_contabil/input/"));
-		fc.setDialogTitle("Buscar tabela verdade");
-		FileNameExtensionFilter filter = new FileNameExtensionFilter("Arquivos Excel", "xls");
-		fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-		fc.setFileFilter(filter);
-
 		Workbook workbook;
 		try {
 			workbook = Workbook.getWorkbook(f);
@@ -79,14 +65,13 @@ public class OraUtil {
 			return p;
 
 		} catch (BiffException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Log.info("WARNING Util - Erro Biff ao buscardadosPlanilha.");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			throw new FileNotFoundException();
 		}catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Log.info("WARNING Util - Erro IO ao buscardadosPlanilha.");
+		}catch (Exception e) {
+			Log.info("WARNING Util - Erro genérico ao buscardadosPlanilha.");
 		}
 
 		return null;
