@@ -49,7 +49,7 @@ public class Email {
 			for (String destinatario: destinatarios) {
 				System.out.println(mailServer+"\n"+destinatario+"\n"+subject);	
 			}
-			Mailer.sendWithAttachments(mailServer, "monitor_conf_contabil@telefonica.com.br", destinatarios, subject, body, "text/html",lsf);
+			Mailer.sendWithAttachments(mailServer, "monitor_conf_contabil", destinatarios, subject, body, "text/html",lsf);
 			
 		} catch (AddressException e) {
 			Log.error("Falha ao enviar e-mail de relatório", e);
